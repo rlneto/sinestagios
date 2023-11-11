@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
+import { Link, useRouteError } from 'react-router-dom'
 
 export default function Error () {
+  const error = useRouteError();
   return (<div>
-    <h1>Algum erro não especificado ocorreu</h1>
+    <h1>Erro {`${error}`}</h1>
     <Link to='/'>Voltar para a página inicial</Link>
     </div>
   )
