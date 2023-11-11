@@ -1,7 +1,7 @@
+import InputText from '../components/InputText'
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
-import InputText from '../components/InputText'
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/Login.module.css'
 
@@ -17,21 +17,12 @@ export default function Login () {
       <div className={`${shared.flex} ${shared.column} ${shared.alignCenter }`}>
         <form className={`${styles.box_form}`}>
           <div className={`${styles.box}`}>
-            <div><label htmlFor='email'>E-mail</label></div>
-            <div ><input className={`${styles.box_input}`} type='email' ref={emailRef} id='email'/></div>
+                    <InputText tipo='email' nome='email' rotulo='E-mail' referencia={emailRef} />
           </div>
           <div className={`${styles.box}`}>
-            <div><label htmlFor='password'>Senha</label></div>
-            <div><input className={`${styles.box_input}`} type='password' id='password' ref={passwordRef} /></div>
+            <InputText tipo='password' nome='password' rotulo='Senha' referencia={passwordRef} />
           </div>
-    <div className={`${shared.flex} ${shared.column} ${styles.container}`}>
-      <div>Acesso</div>
-      <div><form>
-        <InputText tipo='email' nome='email' rotulo='E-mail' referencia={emailRef} />
-        <InputText tipo='password' nome='password' rotulo='Senha' referencia={passwordRef} />
         </form>
-        <div><Button action={LoginHandler} text={`Entrar`}/></div>
-      
       </div>
       <div className={`${styles.btn}`}><Button action={LoginHandler} text={`Entrar`}/></div>
       <div className={`${shared.flex} ${shared.row} ${styles.box_cadastro}`}>
