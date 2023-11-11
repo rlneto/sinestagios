@@ -19,51 +19,63 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
-        element: <Landing />
+        element: <Landing />,
+        errorElement: <Error />,
       },
       {
         path: "login",
-        element: <Login />
+        element: <Login />,
+        errorElement: <Error />,
       },
       {
         path: "register",
-        element: <Register />
+        element: <Register />,
+        errorElement: <Error />,
       }]
   },
   {
     path: "/admin",
-    element: <Admin />
+    element: <Admin />,
+    errorElement: <Error />,
   },
   {
     path: "/dashboard",
     element: <DashboardLayout />,
+    errorElement: <Error />,
     children: [
       {
         path: "all",
-        element: <AllEstagios />
+        element: <AllEstagios />,
+        errorElement: <Error />,
       },
       {
         path: "add",
-        element: <AddEstagio />
+        element: <AddEstagio />,
+        errorElement: <Error />,
       },
       {
         path: "edit/:id",
-        element: <EditEstagio />
+        element: <EditEstagio />,
+        errorElement: <Error />,
       },
       {
         path: "delete/:id",
-        element: <DeleteEstagio />
+        element: <DeleteEstagio />,
+        errorElement: <Error />,
       },
       {
         path: "stats",
-        element: <Stats />
+        element: <Stats />,
+        errorElement: <Error />,
       },
       {
         path: "profile",
-        element: <Profile />
+        element: <Profile />,
+        errorElement: <Error />,
       }]
     },
     {
