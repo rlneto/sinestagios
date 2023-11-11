@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
+import InputText from '../components/InputText'
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/Login.module.css'
 
@@ -14,14 +15,10 @@ export default function Login () {
     <div className={`${shared.flex} ${shared.column} ${styles.container}`}>
       <div>Acesso</div>
       <div><form>
-        <div>
-        <label htmlFor='email'>E-mail</label></div>
-        <div>
-        <input type='email' ref={emailRef} id='email' /></div>
-        <div><label htmlFor='password'>Senha</label></div>
-        <div><input type='password' id='password' ref={passwordRef} /></div>
+        <InputText tipo='email' nome='email' rotulo='E-mail' referencia={emailRef} />
+        <InputText tipo='password' nome='password' rotulo='Senha' referencia={passwordRef} />
         </form>
-        <div><Button action={LoginHandler} text={`Entrar`}/></div>
+        <div><Button className={shared.botao} action={LoginHandler} text={`Entrar`}/></div>
       
       </div>
       <div>

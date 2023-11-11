@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
+import InputText from '../components/InputText'
 import { useRef } from 'react'
 
 export default function Register () {
@@ -9,10 +10,6 @@ export default function Register () {
   const confirmPasswordRef = useRef();
   const RegisterHandler = () => {
     console.log(nameRef.current.value, emailRef.current.value, passwordRef.current.value, confirmPasswordRef.current.value)
-    alert("cadastro efetuado com sucesso");
-    setTimeout(() => {
-      window.location.href = '/login'
-    }, 5000)
   }
 
   return (
@@ -20,18 +17,14 @@ export default function Register () {
       <div><h1>Cadastro</h1></div>
       <div>
         <form type='submit'>
-          <div><label htmlFor='name'>Nome</label></div>
-          <div><input type='text' id='name' placeholder='Nome' /></div>
-          <div><label htmlFor='email'>E-mail</label>          
-          </div>
-          <div><input type='text' id='email' placeholder='E-mail' /></div>
-          <div><label htmlFor='password'>Senha</label></div>
-          <div><input type='password' id='password' placeholder='Senha' /></div>
-          <div><label htmlFor='password'>Confirmar senha</label></div>
-          <div><input type='password' id='password' placeholder='Confirmar senha' /></div>
-          <div><Button text={`Registrar-se`} action={RegisterHandler}>Cadastrar</Button></div>
+          <InputText tipo='text' nome='name' rotulo='Nome' referencia={nameRef} />
+          <InputText tipo='email' nome='email' rotulo='E-mail' referencia={emailRef} />
+          <InputText tipo='password' nome='password' rotulo='Senha' referencia={passwordRef} />
+          <InputText tipo='password' nome='confirmPassword' rotulo='Confirme a senha' referencia={confirmPasswordRef} />
+
           
           </form>
+          <div><Button text={`Registrar-se`} action={RegisterHandler}>Cadastrar</Button></div>
         </div>
         <div>
           <Link to='/login'>Já possui cadastro? Faça login</Link>
