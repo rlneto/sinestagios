@@ -1,6 +1,11 @@
+import { Outlet } from 'react-router-dom'
+
 export default function HomeLayout () {
   return (
-    <h1>Boas vindas ao SINEstágios</h1>
+    <div>
+      <h1>Boas vindas ao SINEstágios</h1>
+      <Outlet />
+    </div>
   )
   
 }
