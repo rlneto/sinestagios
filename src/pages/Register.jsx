@@ -4,8 +4,6 @@ import InputText from '../components/InputText'
 import { useRef } from 'react'
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/Register.module.css'
-import shared from '../styles/Shared.module.css'
-import styles from '../styles/Login.module.css'
 
 export default function Register () {
   const nameRef = useRef();
@@ -20,7 +18,7 @@ export default function Register () {
     <div>
       <div><h1>Cadastro</h1></div>
       <div>
-        <form type='submit'>
+        <form className={`${styles.box_form}`}>
           <InputText tipo='text' nome='name' rotulo='Nome' referencia={nameRef} />
           <InputText tipo='email' nome='email' rotulo='E-mail' referencia={emailRef} />
           <InputText tipo='password' nome='password' rotulo='Senha' referencia={passwordRef} />
