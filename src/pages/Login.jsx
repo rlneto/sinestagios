@@ -1,6 +1,8 @@
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
+import shared from '../styles/Shared.module.css'
+import styles from '../styles/Login.module.css'
 
 export default function Login () {
   const LoginHandler = () => {
@@ -9,7 +11,7 @@ export default function Login () {
   const emailRef = useRef();
   const passwordRef = useRef();
   return (
-    <div>
+    <div className={`${shared.flex} ${shared.column} ${styles.container}`}>
       <div>Acesso</div>
       <div><form>
         <div>

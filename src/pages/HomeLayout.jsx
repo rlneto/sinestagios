@@ -9,12 +9,12 @@ export default function HomeLayout () {
     <div className={`${shared.flex} ${shared.column}`}>
       
       <div className={`${shared.row}`}><Navbar /></div>
-      <div>
+      {/* <div>
         <div><img className={`${styles.logo}`} src='lamp.png'></img></div>
         <div>
         <h1>Estágios INE</h1>
         </div>
-        </div>
+        </div> */}
       <div><Outlet /></div>
       <div><Footer /></div>
     </div>
