@@ -10,12 +10,16 @@ export default function Landing () {
             O SINEstágios é um sistema de gerenciamento de estágios para o curso de
             Sistemas de Informação da Universidade Federal de Santa Catarina.
           </p>
+          <div>
+          <button className='landing__container__content__button'>
           <Link to='/login' className='landing__container__content__button'>
             Acessar
-          </Link>
-          <Link to ='/register' className='landing__container__content__button'>
+          </Link> </button>
+          </div>
+          <div><button><Link to ='/register' className='landing__container__content__button'>
             Inscrever-se
-          </Link>
+          </Link></button></div>
+          
 
         </div>
       </div>
