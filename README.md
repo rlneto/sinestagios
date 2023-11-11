@@ -10,6 +10,7 @@
 #### Informações técnicas
 
 _Tipo de case: PascalCase_
+
 _Stack utilizada: MERN_
 
 - _React.js + Vite_

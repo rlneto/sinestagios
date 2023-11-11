@@ -13,6 +13,10 @@ export default function Landing () {
           <Link to='/login' className='landing__container__content__button'>
             Acessar
           </Link>
+          <Link to ='/register' className='landing__container__content__button'>
+            Inscrever-se
+          </Link>
+
         </div>
       </div>
     </div>
