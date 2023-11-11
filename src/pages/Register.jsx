@@ -3,6 +3,8 @@ import Button from '../components/Button'
 import InputText from '../components/InputText'
 import { useRef } from 'react'
 import shared from '../styles/Shared.module.css'
+import styles from '../styles/Register.module.css'
+import shared from '../styles/Shared.module.css'
 import styles from '../styles/Login.module.css'
 
 export default function Register () {
@@ -15,7 +17,7 @@ export default function Register () {
   }
 
   return (
-    <div className={`${shared.flex} ${shared.column} ${styles.container}`}>
+    <div>
       <div><h1>Cadastro</h1></div>
       <div>
         <form type='submit'>
