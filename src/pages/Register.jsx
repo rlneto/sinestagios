@@ -32,9 +32,6 @@ export default function Register () {
         <div>
           <Link to='/login'>Já possui cadastro? Faça login</Link>
         </div>
-        <div>
-          <Link to='/'>Voltar para a página inicial</Link>
-        </div>
       </div>
     
   )
