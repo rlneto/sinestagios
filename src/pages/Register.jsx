@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import InputText from '../components/InputText'
 import { useRef } from 'react'
+import shared from '../styles/Shared.module.css'
+import styles from '../styles/Login.module.css'
 
 export default function Register () {
   const nameRef = useRef();
@@ -13,7 +15,7 @@ export default function Register () {
   }
 
   return (
-    <div>
+    <div className={`${shared.flex} ${shared.column} ${styles.container}`}>
       <div><h1>Cadastro</h1></div>
       <div>
         <form type='submit'>
