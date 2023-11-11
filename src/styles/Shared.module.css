@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 .textAlignStart {
   text-align: start;
 }
@@ -24,4 +31,15 @@
 
 .column {
   flex-direction: column;
+}
+
+.btn {
+  cursor: pointer;
+  color: white;
+  background: #4169E1;
+  border: transparent;
+  border-radius: 5px;
+  padding: 0.375rem 0.75rem;
+  display: inline-block;
+
 }
