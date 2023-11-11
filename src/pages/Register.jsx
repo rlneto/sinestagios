@@ -9,6 +9,10 @@ export default function Register () {
   const confirmPasswordRef = useRef();
   const RegisterHandler = () => {
     console.log(nameRef.current.value, emailRef.current.value, passwordRef.current.value, confirmPasswordRef.current.value)
+    alert("cadastro efetuado com sucesso");
+    setTimeout(() => {
+      window.location.href = '/login'
+    }, 5000)
   }
 
   return (
