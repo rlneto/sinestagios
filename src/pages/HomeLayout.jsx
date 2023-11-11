@@ -1,13 +1,16 @@
 import { Outlet } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import shared from '../styles/Shared.module.css'
+import styles from '../styles/HomeLayout.module.css'
+
 export default function HomeLayout () {
   return (
-    <div>
+    <div className={`${shared.flex} ${shared.column}`}>
       
-      <div><Navbar /></div>
+      <div className={`${shared.row}`}><Navbar /></div>
       <div>
-        <div><img src='lamp.png'></img></div>
+        <div><img className={`${styles.logo}`} src='lamp.png'></img></div>
         <div>
         <h1>Estágios INE</h1>
         </div>
