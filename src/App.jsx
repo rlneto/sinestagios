@@ -15,19 +15,20 @@ import {
   Stats
 } from './pages'
 
+
 const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout />,
     errorElement: <Error />,
     children: [
+      // {
+      //   index: true,
+      //   element: <Landing />,
+      //   errorElement: <Error />,
+      // },
       {
-        index: true,
-        element: <Landing />,
-        errorElement: <Error />,
-      },
-      {
-        path: "login",
+        index:true,
         element: <Login />,
         errorElement: <Error />,
       },
