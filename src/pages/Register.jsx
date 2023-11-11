@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import { useRef } from 'react'
+import shared from '../styles/Shared.module.css'
+import styles from '../styles/Register.module.css'
 
 export default function Register () {
   const nameRef = useRef();
@@ -12,8 +14,8 @@ export default function Register () {
   }
 
   return (
-    <div>
-      <div><h1>Cadastro</h1></div>
+    <div className={`${shared.flex} ${shared.column} ${shared.alignCenter } ${styles.container}`}>
+      <div className={`${styles.title}`}><h1>Cadastro</h1></div>
       <div>
         <form type='submit'>
           <div><label htmlFor='name'>Nome</label></div>
