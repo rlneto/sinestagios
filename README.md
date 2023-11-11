@@ -10,9 +10,10 @@
 #### Informações técnicas
 
 _Tipo de case: PascalCase_
-_Stack MERN:
-- React.js + Vite
-- Node.js
-- Express.js
-- Mongoose
-_
+_Stack utilizada: MERN_
+
+_- React.js + Vite_
+_- Node.js_
+_- Express.js_
+_- Mongoose_
+
