@@ -12,8 +12,8 @@
 _Tipo de case: PascalCase_
 _Stack utilizada: MERN_
 
-_- React.js + Vite_
-_- Node.js_
-_- Express.js_
-_- Mongoose_
+- _React.js + Vite_
+- _Node.js_
+- _Express.js_
+- _Mongoose_
 
