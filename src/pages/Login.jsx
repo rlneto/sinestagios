@@ -37,7 +37,7 @@ export default function Login (props) {
           </form>
         </div>
         <div className={`${styles.btn}`}><Button action={LoginHandler} text={`Entrar`}/></div>
-        <div className={`${shared.flex} ${shared.row} ${styles.box_cadastro}`}>
+        <div className={`${shared.flex} ${shared.row} ${shared.justifyCenter} ${styles.box_cadastro}`}>
           <p>Não tem uma conta?</p>
           <Link to='/register' className={`${styles.nav_link}`}>Cadastrar-se</Link>
         </div>
