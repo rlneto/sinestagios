@@ -6,7 +6,7 @@ import Card from '../components/Card'
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/Login.module.css'
 
-export default function Login () {
+export default function Login (props) {
 
   const users = [
     {
@@ -17,7 +17,9 @@ export default function Login () {
   ]
   const LoginHandler = () => {
     if (users[0].email === emailRef.current.value && users[0].password === passwordRef.current.value) {
+      props.setLoggado(true)
       alert('Usuário logado')
+      console.log(props.loggado)
     } else {
       alert('Usuário ou senha incorretos')
     }

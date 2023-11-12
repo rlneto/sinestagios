@@ -4,6 +4,8 @@ import styles from '../styles/DashboardLayout.module.css'
 
 export default function DashboardLayout () {
   return (
-    <div><Outlet /></div>
+    <div>
+      <Outlet />
+    </div>
   )
 }

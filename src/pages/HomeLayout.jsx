@@ -4,11 +4,11 @@ import Footer from '../components/Footer'
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/HomeLayout.module.css'
 
-export default function HomeLayout () {
+export default function HomeLayout (props) {
   return (
     <div className={`${shared.flex} ${shared.column}`}>
       
-      <div className={`${shared.row}`}><Navbar /></div>
+      <div className={`${shared.row}`}><Navbar loggado={props.loggado} setLoggado={props.setLoggado} /></div>
       {/* <div>
         <div><img className={`${styles.logo}`} src='lamp.png'></img></div>
         <div>

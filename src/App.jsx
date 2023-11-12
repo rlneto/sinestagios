@@ -1,4 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useState } from 'react'
+import UserContext from './UserContext'
 import {
   AddEstagio,
   Admin,
@@ -94,8 +96,11 @@ const router = createBrowserRouter([
 )
 
 const App = () => {
+  const [loggado, setLoggado] = useState(false)
   return (
+    <UserContext.Provider value={{loggado, setLoggado}}>
       <RouterProvider router={router} />
+    </UserContext.Provider>
   );
 }
 
