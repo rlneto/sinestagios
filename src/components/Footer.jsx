@@ -11,7 +11,6 @@ export default function Footer () {
         <a href="https://www.linkedin.com/feed/"><FontAwesomeIcon icon={faLinkedinIn} style={{ color: "#fff" }} /></a>
         <a href="https://github.com/rlneto/sinestagios"><FontAwesomeIcon icon={faGithub} style={{ color: "#fff" }} /></a>
       </p>
-     {/* <p><img className={`${styles.social_links}`} src='linkedin-in.svg'></img>links</p> */} 
     </div>
   )
 }
