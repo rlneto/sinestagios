@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 export default function Navbar () {
   const { loggado, setLoggado } = useContext(UserContext)
   const linksLoggado = (
-    <ul className={`${styles.ul}`}>
+    <>
       <li>
         <Link to="/dashboard" className={`${styles.nav_link}`}>Dashboard</Link>
       </li>
@@ -18,15 +18,15 @@ export default function Navbar () {
       <li>
         <Button action={() => setLoggado(false)} text={`Sair`}/>
       </li>
-    </ul>
+    </>
   )
 
   const linksNaoLoggado = (
-    <ul className={`${styles.ul}`}>
+    <>
       <li>
         <Link to="/login" className={`${styles.nav_link}`}>Login</Link>
       </li>
-    </ul>
+    </>
   )
   return (
     <div className={`${shared.flex} ${shared.alignCenter} ${styles.container}`}>
@@ -41,6 +41,7 @@ export default function Navbar () {
             <li>
               <Link to="/register" className={`${styles.nav_link}`}>Cadastro</Link>
             </li>
+            <li><button onClick={() => {setLoggado(!loggado)}}>Desloggar</button></li>
           </ul>
         </nav>
       </div>
