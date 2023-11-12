@@ -96,7 +96,7 @@ const router = createBrowserRouter([
 )
 
 const App = () => {
-  const [loggado, setLoggado] = useState(false)
+  const [loggado, setLoggado] = useState(true)
   return (
     <UserContext.Provider value={{loggado, setLoggado}}>
       <RouterProvider router={router} />

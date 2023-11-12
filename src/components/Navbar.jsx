@@ -26,6 +26,9 @@ export default function Navbar () {
       <li>
         <Link to="/login" className={`${styles.nav_link}`}>Login</Link>
       </li>
+      <li>
+        <Link to="/register" className={`${styles.nav_link}`}>Cadastro</Link>
+      </li>
     </>
   )
   return (
@@ -36,12 +39,9 @@ export default function Navbar () {
       </div>
       <div className={`${styles.c2}`}>
         <nav>
-          <ul className={`${styles.ul}`}>
+          <ul className={`${styles.ul} ${shared.flex} ${shared.row} ${shared.alignCenter}`}>
             {loggado ? linksLoggado : linksNaoLoggado}
-            <li>
-              <Link to="/register" className={`${styles.nav_link}`}>Cadastro</Link>
-            </li>
-            <li><button onClick={() => {setLoggado(!loggado)}}>Desloggar</button></li>
+            {/* <li><button onClick={() => {setLoggado(!loggado)}}>Desloggar</button></li> */}
           </ul>
         </nav>
       </div>

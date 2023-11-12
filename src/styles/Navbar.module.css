@@ -29,19 +29,19 @@
 }
 
 .c2 {
-    /* border: 2px solid red; */
-    border: 2px solid #f0f0f0;
+    /* border: 2px solid #f0f0f0; */
     border-radius: 15px;
     padding: 10px;
     margin-right: 60px;
 }
 
-.c2:hover {
+/* .c2:hover {
     border: 2px solid #4169E1;
-}
+} */
 
 .ul {
     list-style: none;
+    gap: 20px;
 }
 
 .nav_link {
