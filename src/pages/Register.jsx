@@ -18,7 +18,7 @@ export default function Register () {
   return (
     <div className={`${shared.flex} ${shared.column} ${shared.alignCenter }`}>
       <Card>
-      <div><h1>Cadastro</h1></div>
+      <div className={`${styles.title}`}><h1>Cadastro</h1></div>
       <div>
         <form className={`${styles.box_form}`}>
           <InputText tipo='text' nome='name' rotulo='Nome' referencia={nameRef} />
