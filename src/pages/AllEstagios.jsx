@@ -1,4 +1,5 @@
 import Card from '../components/Card'
+import shared from '../styles/Shared.module.css'
 
 export default function AllEstagios () {
   const vagas = [
@@ -43,18 +44,18 @@ export default function AllEstagios () {
       <div>
         <h1>Estágios</h1>
       </div>
-      <div>
+      <ul>
         {vagas.map(vaga => (
-          <div key={vaga.id}>
+          <li key={vaga.id} className={shared.marginBottom}>
             <Card>
               <h2>{vaga.titulo}</h2>
               <h3>{vaga.empresa}</h3>
               <p>{vaga.local}</p>
               <p>{vaga.descricao}</p>
             </Card>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   )
 }

@@ -6,8 +6,13 @@
     max-height: 100px;
     display: flex;
     justify-content: space-between;
-    /* position: fixed;
-    width: 100%; */
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    background-color: white;
     /* margin-bottom: 200px; */
   }
 
@@ -53,3 +58,4 @@
 .nav_link:hover {
     color: #4169E1;
 }
+

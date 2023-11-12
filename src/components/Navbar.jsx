@@ -9,12 +9,10 @@ export default function Navbar () {
   const { loggado, setLoggado } = useContext(LoggedInContext)
   const linksLoggado = (
     <>
-      <li>
-        <Link to="/dashboard" className={`${styles.nav_link}`}>Dashboard</Link>
-      </li>
-      <li>
+      <Link to="/dashboard/all" className={`${styles.nav_link}`}>Vagas</Link>
+      {/* <li>
         <Link to="/inbox" className={`${styles.nav_link}`}>Inbox</Link>
-      </li>
+      </li> */}
       <li>
         <Button action={() => setLoggado(false)} text={`Sair`}/>
       </li>
@@ -40,9 +38,9 @@ export default function Navbar () {
       <div className={`${styles.c2}`}>
         <nav>
           <ul className={`${styles.ul} ${shared.flex} ${shared.row} ${shared.alignCenter}`}>
-            {loggado ? linksLoggado : linksNaoLoggado}
-            {/* <li><button onClick={() => {setLoggado(!loggado)}}>Desloggar</button></li> */}
+            <li><button onClick={() => {setLoggado(!loggado)}}>Desloggar</button></li>
             <li><button onClick={() => {console.log(window.location.href)}}>Console</button></li>
+            {loggado ? linksLoggado : linksNaoLoggado}
           </ul>
         </nav>
       </div>

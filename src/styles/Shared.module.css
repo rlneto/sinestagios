@@ -5,6 +5,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+.body {
+  padding-top: 100px;
+}
+
+
 .textAlignStart {
   text-align: start;
 }
@@ -39,6 +44,10 @@
 
 .marginTop {
   margin-top: 1rem;
+}
+
+.marginBottom {
+  margin-bottom: 1rem;
 }
 
 .fontPadding {
