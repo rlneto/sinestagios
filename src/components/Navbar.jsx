@@ -42,6 +42,7 @@ export default function Navbar () {
           <ul className={`${styles.ul} ${shared.flex} ${shared.row} ${shared.alignCenter}`}>
             {loggado ? linksLoggado : linksNaoLoggado}
             {/* <li><button onClick={() => {setLoggado(!loggado)}}>Desloggar</button></li> */}
+            <li><button onClick={() => {console.log(window.location.href)}}>Console</button></li>
           </ul>
         </nav>
       </div>
