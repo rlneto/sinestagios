@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import InputText from '../components/InputText'
+import Card from '../components/Card'
 import { useRef } from 'react'
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/Register.module.css'
@@ -15,7 +16,8 @@ export default function Register () {
   }
 
   return (
-    <div>
+    <div className={`${shared.flex} ${shared.column} ${shared.alignCenter }`}>
+      <Card>
       <div><h1>Cadastro</h1></div>
       <div>
         <form className={`${styles.box_form}`}>
@@ -26,11 +28,13 @@ export default function Register () {
 
           
           </form>
-          <div><Button text={`Registrar-se`} action={RegisterHandler}>Cadastrar</Button></div>
+          <div className={`${styles.btn}`}><Button text={`Registrar-se`} action={RegisterHandler}>Cadastrar</Button></div>
         </div>
-        <div>
-          <Link to='/login'>Já possui cadastro? Faça login</Link>
+        <div className={`${shared.marginTop} ${shared.textAlignCenter}`}>
+          <span>Já possui cadastro?</span>
+          <Link className={`${shared.nav_link}`} to='/login'>Faça login</Link>
         </div>
+        </Card>
       </div>
     
   )
