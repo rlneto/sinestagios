@@ -12,8 +12,14 @@ export default function Register () {
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
   const RegisterHandler = () => {
-    console.log(nameRef.current.value, emailRef.current.value, passwordRef.current.value, confirmPasswordRef.current.value)
-  }
+    if (passwordRef.current.value === confirmPasswordRef.current.value) {
+      const user = {
+        name: nameRef.current.value,
+        email: emailRef.current.value,
+        password: passwordRef.current.value
+      }
+      alert(`Usuário ${user.name}, com o e-mail ${user.email} cadastrado com sucesso!`) 
+  } }
 
   return (
     <div className={`${shared.flex} ${shared.column} ${shared.alignCenter }`}>

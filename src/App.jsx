@@ -12,7 +12,7 @@ import {
   Login,
   Profile,
   Register,
-  Stats
+  Inbox
 } from './pages'
 
 
@@ -55,6 +55,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
+        index:true,
         path: "all",
         element: <AllEstagios />,
         errorElement: <Error />,
@@ -75,8 +76,8 @@ const router = createBrowserRouter([
         errorElement: <Error />,
       },
       {
-        path: "stats",
-        element: <Stats />,
+        path: "inbox",
+        element: <Inbox />,
         errorElement: <Error />,
       },
       {

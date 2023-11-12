@@ -7,8 +7,20 @@ import shared from '../styles/Shared.module.css'
 import styles from '../styles/Login.module.css'
 
 export default function Login () {
+
+  const users = [
+    {
+      email: 'pogarrido@earth.com.br',
+      password: 'quantacoisaboa',
+      nome: 'Paul Otolino Garrido'
+    }
+  ]
   const LoginHandler = () => {
-    console.log(emailRef.current.value, passwordRef.current.value)
+    if (users[0].email === emailRef.current.value && users[0].password === passwordRef.current.value) {
+      alert('Usuário logado')
+    } else {
+      alert('Usuário ou senha incorretos')
+    }
   }
   const emailRef = useRef();
   const passwordRef = useRef();
