@@ -38,7 +38,7 @@ export default function Navbar () {
       <div className={`${styles.c2}`}>
         <nav>
           <ul className={`${styles.ul} ${shared.flex} ${shared.row} ${shared.alignCenter}`}>
-            <li><button onClick={() => {setLoggado(!loggado)}}>Desloggar</button></li>
+            <li><button onClick={() => {setLoggado(!loggado)}}>{loggado ? `Desloggar` : `Loggar`}</button></li>
             <li><button onClick={() => {console.log(window.location.href)}}>Console</button></li>
             {loggado ? linksLoggado : linksNaoLoggado}
           </ul>
