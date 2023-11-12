@@ -1,12 +1,12 @@
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/Navbar.module.css'
 import { useContext } from 'react'
-import UserContext from '../UserContext'
+import LoggedInContext from '../LoggedInContext'
 import Button from './Button'
 import { Link } from 'react-router-dom';
 
 export default function Navbar () {
-  const { loggado, setLoggado } = useContext(UserContext)
+  const { loggado, setLoggado } = useContext(LoggedInContext)
   const linksLoggado = (
     <>
       <li>

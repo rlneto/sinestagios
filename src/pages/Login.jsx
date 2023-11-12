@@ -1,13 +1,17 @@
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
-import Button from '../components/Button'
+import { useContext } from 'react'
+import LoggedInContext from '../LoggedInContext'
+import UserContext from '../UserContext'
 import InputText from '../components/InputText'
 import Card from '../components/Card'
+import Button from '../components/Button'
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/Login.module.css'
 
 export default function Login (props) {
-
+  const { loggado, setLoggado } = useContext(LoggedInContext)
+  const { user, setUser } = useContext(UserContext)
   const users = [
     {
       email: 'pogarrido@earth.com.br',
@@ -16,12 +20,19 @@ export default function Login (props) {
     }
   ]
   const LoginHandler = () => {
-    if (users[0].email === emailRef.current.value && users[0].password === passwordRef.current.value) {
-      props.setLoggado(true)
-      alert('Usuário logado')
-      console.log(props.loggado)
+    const email = emailRef.current.value
+    const password = passwordRef.current.value
+    const user = users.find(user => user.email === email)
+    if (user) {
+      if (user.password === password) {
+        setUser(user)
+        setLoggado(true)
+        alert(`Usuário ${user.nome} logado com sucesso!`)
+      } else {
+        alert('Senha incorreta')
+      }
     } else {
-      alert('Usuário ou senha incorretos')
+      alert('Usuário não encontrado')
     }
   }
   const emailRef = useRef();
