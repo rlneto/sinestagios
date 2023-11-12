@@ -6,9 +6,12 @@
 }
 
 .body {
-  padding-top: 100px;
+  padding: 10vh 0px 50px 0px;
 }
 
+.height100 {
+  height: 100vh;
+}
 
 .textAlignStart {
   text-align: start;
@@ -20,6 +23,10 @@
 
 .flex {
   display: flex;
+}
+
+.spaceBetween {
+  justify-content: space-between;
 }
 
 .alignCenter {
@@ -36,6 +43,10 @@
 
 .column {
   flex-direction: column;
+}
+
+.flexEnd {
+  align-self: flex-end;
 }
 
 .smallGap {

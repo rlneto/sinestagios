@@ -6,11 +6,11 @@ import Footer from '../components/Footer'
 
 export default function DashboardLayout () {
   return (
-    <div className={`${shared.body}`}>
+    <div className={`${shared.flex} ${shared.column} ${shared.spaceBetween} ${shared.height100}`}>
       <div>
         <Navbar />
       </div>
-      <div>
+      <div className={`${shared.body}`}>
         <Outlet />
       </div>
       <div>

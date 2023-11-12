@@ -1,7 +1,9 @@
 .btn {
+    margin-top: 0;
+    margin-bottom: 0;
     width: fit-content;
     height: fit-content;
-    padding: 10px 20px;
+    padding: 5px 15px;
     background-color: #4169E1;
     font-size: 15px;
     color: white;

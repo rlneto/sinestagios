@@ -6,7 +6,7 @@ import styles from '../styles/HomeLayout.module.css'
 
 export default function HomeLayout (props) {
   return (
-    <div className={`${shared.flex} ${shared.column} ${shared.body}`}>
+    <div className={`${shared.flex} ${shared.column} ${shared.spaceBetween} ${shared.height100}`}>
       
       <div className={`${shared.row}`}><Navbar loggado={props.loggado} setLoggado={props.setLoggado} /></div>
       {/* <div>
@@ -15,7 +15,7 @@ export default function HomeLayout (props) {
         <h1>Estágios INE</h1>
         </div>
         </div> */}
-      <div><Outlet /></div>
+      <div className={`${shared.body}`}><Outlet /></div>
       <div><Footer /></div>
     </div>
   )
