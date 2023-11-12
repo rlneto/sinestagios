@@ -1,50 +1,16 @@
 import Card from '../components/Card'
 import shared from '../styles/Shared.module.css'
+import { users, vagas } from '../db/Database.js'
 
 export default function AllEstagios () {
-  const vagas = [
-      {
-        id: 1,
-        titulo: 'Estágio em Desenvolvimento de Software',
-        empresa: 'Empresa 1',
-        local: 'São Paulo - SP',
-        descricao: 'Lorem ipsum',
-      },
-      {
-        id: 2,
-        titulo: 'Estágio em Desenvolvimento de Software',
-        empresa: 'Empresa 2',
-        local: 'São Paulo - SP',
-        descricao: 'Lorem ipsum',
-      },
-      {
-        id: 3,
-        titulo: 'Estágio em Desenvolvimento de Software',
-        empresa: 'Empresa 3',
-        local: 'São Paulo - SP',
-        descricao: 'Lorem ipsum',
-      },
-      {
-        id: 4,
-        titulo: 'Estágio em Desenvolvimento de Software',
-        empresa: 'Empresa 4',
-        local: 'São Paulo - SP',
-        descricao: 'Lorem ipsum',
-      },
-      {
-        id: 5,
-        titulo: 'Estágio em Desenvolvimento de Software',
-        empresa: 'Empresa 5',
-        local: 'São Paulo - SP',
-        descricao: 'Lorem ipsum',
-      }
-    ]
+  
   return (
-    <div>
-      <div>
-        <h1>Estágios</h1>
+    <div className={`${shared.flex} ${shared.column} ${shared.alignCenter}`}>
+      <div className={`${shared.row} ${shared.marginBottom} ${shared.textAlignCenter}`}>
+        <h1>Vagas de estágio</h1>
       </div>
-      <ul>
+      <div className={`${shared.row}`}>
+      <ul className={shared.noList}>
         {vagas.map(vaga => (
           <li key={vaga.id} className={shared.marginBottom}>
             <Card>
@@ -56,6 +22,7 @@ export default function AllEstagios () {
           </li>
         ))}
       </ul>
+      </div>
     </div>
   )
 }

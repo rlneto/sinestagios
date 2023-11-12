@@ -12,13 +12,7 @@ import styles from '../styles/Login.module.css'
 export default function Login (props) {
   const { loggado, setLoggado } = useContext(LoggedInContext)
   const { user, setUser } = useContext(UserContext)
-  const users = [
-    {
-      email: 'pogarrido@earth.com.br',
-      password: 'quantacoisaboa',
-      nome: 'Paul Otolino Garrido'
-    }
-  ]
+  
   const LoginHandler = () => {
     const email = emailRef.current.value
     const password = passwordRef.current.value
