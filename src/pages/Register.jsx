@@ -19,6 +19,8 @@ export default function Register () {
         password: passwordRef.current.value
       }
       alert(`Usuário ${user.name}, com o e-mail ${user.email} cadastrado com sucesso!`) 
+  } else {
+    alert('As senhas não conferem')
   } }
 
   return (
