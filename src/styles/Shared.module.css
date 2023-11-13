@@ -118,8 +118,6 @@
 }
 
 .btnVagas {
-  width: fit-content;
-  height: fit-content;
   margin-top: 0;
   margin-bottom: 0;
   width: fit-content;
@@ -137,4 +135,17 @@
   color: #fff;
   background-color: #4169E1;
   cursor: pointer;
+}
+
+.cardVagas {
+  border: 2px solid black;
+  width: 500px;
+  height: 250px;
+  max-width: 100vw;
+  max-height: 450px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
