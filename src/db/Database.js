@@ -12,7 +12,7 @@ export const users = [
         {
           remetente: 'muitofacil@inf.ufsc.br',
           titulo: 'Qual a dificuldade?',
-          mensagem: 'Olá Paul, tudo bem? Gostaríamos de saber qual a sua dificuldade em programar algo tão fácil. Você poderia me responder?',
+          mensagem: 'Olá Paul, tudo bem? Gostaríamos de saber qual a sua dificuldade em desenvolver algo tão fácil. Você poderia me responder?',
         }
       ],
     },

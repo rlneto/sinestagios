@@ -2,12 +2,16 @@ import shared from '../styles/Shared.module.css'
 import styles from '../styles/Navbar.module.css'
 import { useContext } from 'react'
 import LoggedInContext from '../LoggedInContext'
+import UserContext from '../UserContext'
+import { useNavigate } from 'react-router-dom'
 import Button from './Button'
 import { Link } from 'react-router-dom';
 import lamp from '../assets/lamp.png'
 
 export default function Navbar () {
   const { loggado, setLoggado } = useContext(LoggedInContext)
+  const { setUser } = useContext(UserContext)
+  const navegar = useNavigate();
   const linksLoggado = (
     <>
       <Link to="/dashboard/all" className={`${styles.nav_link}`}>Vagas</Link>
@@ -18,7 +22,11 @@ export default function Navbar () {
         <Link to="/dashboard/profile" className={`${styles.nav_link}`}>Perfil</Link>
       </li>
       <li>
-        <Button action={() => setLoggado(false)} text={`Sair`}/>
+        <Button action={() => {
+          setLoggado(false)
+          setUser(null)
+          navegar('/')
+          }} text={`Sair`}/>
       </li>
     </>
   )
@@ -37,7 +45,7 @@ export default function Navbar () {
     <div className={`${shared.flex} ${shared.alignCenter} ${styles.container}`}>
       <div className={`${shared.flex} ${shared.alignCenter} ${styles.c1}`}>
         <div><img className={`${styles.logo}`} src={lamp}></img></div>
-        <h1>Estágios <span className={`${styles.title_INE}`}>INE.</span></h1>
+        <h1>Estágios <span className={`${styles.title_INE}`}>INE</span></h1>
       </div>
       <div className={`${styles.c2}`}>
         <nav>

@@ -1,38 +1,45 @@
 import { useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import LoggedInContext from '../LoggedInContext'
 import UserContext from '../UserContext'
+import { users } from '../db/Database.js'
 import InputText from '../components/InputText'
 import Card from '../components/Card'
 import Button from '../components/Button'
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/Login.module.css'
 
-export default function Login (props) {
-  const { loggado, setLoggado } = useContext(LoggedInContext)
-  const { user, setUser } = useContext(UserContext)
+export default function Login () {
+  const { setLoggado } = useContext(LoggedInContext)
+  const { setUser } = useContext(UserContext)
+  const navegar = useNavigate();
   
   const LoginHandler = () => {
     const email = emailRef.current.value
     const password = passwordRef.current.value
+    try {
     const user = users.find(user => user.email === email)
     if (user) {
       if (user.password === password) {
         setUser(user)
         setLoggado(true)
-        alert(`Usuário ${user.nome} logado com sucesso!`)
+        navegar('/dashboard/all')
       } else {
         alert('Senha incorreta')
+        navegar('/login')
       }
-    } else {
+    }
+    } catch (error) {
       alert('Usuário não encontrado')
+      navegar('/login')
     }
   }
   const emailRef = useRef();
   const passwordRef = useRef();
   return (
     <div className={`${shared.flex} ${shared.column} ${shared.alignCenter }`}>
+      <div className={`${shared.row} ${shared.marginBottom} ${shared.textAlignCenter}`}>
       <Card>
         <div className={`${styles.title}`}><h1>Login</h1></div>
         <div className={`${shared.flex} ${shared.column} ${shared.alignCenter }`}>
@@ -47,6 +54,7 @@ export default function Login (props) {
           <Link to='/register' className={`${styles.nav_link}`}>Cadastrar-se</Link>
         </div>
       </Card>
+      </div>
     </div>
   )
 }
