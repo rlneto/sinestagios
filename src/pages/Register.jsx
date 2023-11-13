@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useRef } from 'react'
+import { users } from '../db/Database'
 import Button from '../components/Button'
 import InputText from '../components/InputText'
 import Card from '../components/Card'
-import { useRef } from 'react'
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/Register.module.css'
 
@@ -11,14 +12,17 @@ export default function Register () {
   const emailRef = useRef();
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
+  const navegar = useNavigate()
   const RegisterHandler = () => {
     if (passwordRef.current.value === confirmPasswordRef.current.value) {
       const user = {
-        name: nameRef.current.value,
+        nome: nameRef.current.value,
         email: emailRef.current.value,
         password: passwordRef.current.value
       }
-      alert(`Usuário ${user.name}, com o e-mail ${user.email} cadastrado com sucesso!`) 
+      users.push(user)
+      alert('Usuário cadastrado com sucesso!')
+      navegar('/login')
   } else {
     alert('As senhas não conferem')
   } }
