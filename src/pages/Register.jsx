@@ -36,7 +36,7 @@ export default function Register () {
 
           
           </form>
-          <div className={`${styles.btn}`}><Button text={`Registrar-se`} action={RegisterHandler}>Cadastrar</Button></div>
+          <div className={`${styles.btn}`}><Button text={`Registrar-se`} action={RegisterHandler} estilo={shared.btnLogin}>Cadastrar</Button></div>
         </div>
         <div className={`${shared.marginTop} ${shared.textAlignCenter}`}>
           <span>Já possui cadastro?</span>

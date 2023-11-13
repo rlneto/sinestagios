@@ -53,6 +53,10 @@
   gap: 0.5rem;
 }
 
+.bigGap {
+  gap: 20px;
+}
+
 .marginTop {
   margin-top: 1rem;
 }
@@ -63,6 +67,10 @@
 
 .fontPadding {
   padding: 0.5rem;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -107,4 +115,37 @@
 .btn:hover {
     background-color: #1E90FF;
     cursor: pointer;
+}
+
+.btnLogin {
+  width: 300px;
+  height: 40px;
+  background-color: #4169E1;
+  font-size: 15px;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btnVagas {
+  width: fit-content;
+  height: fit-content;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 15px;
+  background-color: #fff;;
+  font-size: 15px;
+  color: #4169E1;
+  border-radius: 10px;
+  border: 1px solid #4169E1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btnVagas:hover {
+  color: #fff;
+  background-color: #4169E1;
+  cursor: pointer;
 }
