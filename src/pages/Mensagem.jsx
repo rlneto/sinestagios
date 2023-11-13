@@ -1,5 +1,4 @@
-import { useContext, useState, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useContext, useRef } from 'react'
 import UserContext from '../UserContext'
 import Card from '../components/Card'
 import InputText from '../components/InputText'
