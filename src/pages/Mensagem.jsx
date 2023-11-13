@@ -26,6 +26,7 @@ export default function Mensagem () {
       data: dataFormatada
     }
     console.log(mensagemObj)
+    alert('Verificar no console (Ctrl + Shift + i) o objeto da mensagem enviada')
   }
 
   return (
