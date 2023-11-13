@@ -22,6 +22,13 @@ export default function Navbar () {
         <Link to="/dashboard/profile" className={`${styles.nav_link}`}>Perfil</Link>
       </li>
       <li>
+        <Link to="/dashboard/mensagem" className={`${styles.nav_link}`}>Escrever Mensagem</Link>
+      </li>
+      <li>
+        <Link to="/dashboard/add" className={`${styles.nav_link}`}>Criar Vaga</Link>
+      </li>
+      <li>
+      
         <Button action={() => {
           setLoggado(false)
           setUser(null)

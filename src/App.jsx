@@ -11,8 +11,8 @@ import {
   EditEstagio,
   Error,
   HomeLayout,
-  Landing,
   Login,
+  Mensagem,
   Profile,
   Register,
   Inbox
@@ -81,6 +81,11 @@ const router = createBrowserRouter([
       {
         path: "inbox",
         element: <Inbox />,
+        errorElement: <Error />,
+      },
+      {
+        path: "mensagem",
+        element: <Mensagem />,
         errorElement: <Error />,
       },
       {

@@ -1,13 +1,14 @@
 import Card from '../components/Card'
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/AllEstagios.module.css'
-import { users, vagas } from '../db/Database.js'
+import { useNavigate } from 'react-router-dom'
+import { vagas } from '../db/Database.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faBriefcase   } from '@fortawesome/free-solid-svg-icons';
 import Button from '../components/Button'
 
 export default function AllEstagios () {
-  
+  const navegar = useNavigate()
   return (
     <div className={`${shared.flex} ${shared.column} ${shared.alignCenter}`}>
       <div className={`${shared.row} ${shared.marginBottom} ${shared.textAlignCenter}`}>
@@ -22,6 +23,7 @@ export default function AllEstagios () {
                 <div className={`${shared.flex} ${shared.column} ${styles.card} ${shared.alignCenter}`}>
                   <h2 className={`${styles.title_vaga}`}>{vaga.titulo}</h2>
                   <h3>{vaga.empresa}</h3>
+                  <h4>{vaga.autor}</h4>
                   <p>{vaga.descricao}</p>
                   <div className={`${shared.flex} ${shared.row} ${shared.bigGap}`} >
                     <div className={`${shared.flex} ${shared.row} ${shared.smallGap}`}>
@@ -30,10 +32,10 @@ export default function AllEstagios () {
                     </div>
                     <div className={`${shared.flex} ${shared.row} ${shared.smallGap}`}>
                       <FontAwesomeIcon icon={faBriefcase } style={{ color: "gray"}}/>
-                      <p className={`${styles.period}`}>Full-time Job</p>
+                      <p className={`${styles.period}`}>{vaga.periodo}</p>
                     </div>
                   </div>
-                  <Button text={`Enviar mensagem`} estilo={shared.btnVagas}></Button>
+                  <Button action={() => navegar('/dashboard/mensagem')} text={`Enviar mensagem`} estilo={shared.btnVagas}></Button>
                 </div>
               </Card>
             </li>

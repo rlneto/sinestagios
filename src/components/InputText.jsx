@@ -6,7 +6,7 @@ export default function InputText ({tipo, nome, rotulo, valorPadrao, referencia}
     <div className={`${shared.inputtext}`}>
       <div className={`${styles.box}`}>
       <label className={`${shared.rotulo}`} htmlFor={nome}>{rotulo}</label></div>
-      <div><input className={`${styles.box_input} ${shared.fontPadding}`} type={tipo} name={nome} id={nome} placeholder={rotulo} defaultValue={valorPadrao || ''} ref={referencia} required/></div>
+      <div><input className={`${styles.box_input} ${shared.fontPadding}`} type={tipo} name={nome} id={nome} placeholder={valorPadrao} ref={referencia} required/></div>
     </div>
   )
 }
