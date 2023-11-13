@@ -19,17 +19,18 @@ export default function Login () {
     const email = emailRef.current.value
     const password = passwordRef.current.value
     try {
-    const user = users.find(user => user.email === email)
-    if (user) {
-      if (user.password === password) {
-        setUser(user)
-        setLoggado(true)
-        navegar('/dashboard/all')
-      } else {
-        alert('Senha incorreta')
-        navegar('/login')
+      const user = users.find(user => user.email === email)
+      if (user) {
+        if (user.password === password) {
+          setUser(user)
+          setLoggado(true)
+          console.log(user)
+          navegar('/dashboard/all')
+        } else {
+          alert('Senha incorreta')
+          navegar('/login')
+        }
       }
-    }
     } catch (error) {
       alert('Usuário não encontrado')
       navegar('/login')

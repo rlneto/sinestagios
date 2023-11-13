@@ -15,9 +15,9 @@ export default function Navbar () {
   const linksLoggado = (
     <>
       <Link to="/dashboard/all" className={`${styles.nav_link}`}>Vagas</Link>
-      {/* <li>
-        <Link to="/inbox" className={`${styles.nav_link}`}>Inbox</Link>
-      </li> */}
+      <li>
+        <Link to="/dashboard/inbox" className={`${styles.nav_link}`}>Inbox</Link>
+      </li>
       <li>
         <Link to="/dashboard/profile" className={`${styles.nav_link}`}>Perfil</Link>
       </li>
@@ -37,7 +37,7 @@ export default function Navbar () {
         <Link to="/register" className={`${styles.nav_link}`}>Cadastro</Link>
       </li>
       <li >
-        <Link to="/login" className={`${styles.nav_link} ${shared.btn}`}>Login</Link>
+        <Button action={() => {navegar('/login')}} text={`Login`} estilo={shared.btn}/>
       </li>
     </>
   )
@@ -50,7 +50,7 @@ export default function Navbar () {
       <div className={`${styles.c2}`}>
         <nav>
           <ul className={`${styles.ul} ${shared.flex} ${shared.row} ${shared.alignCenter}`}>
-            <li><button onClick={() => {setLoggado(!loggado)}}>{loggado ? `Desloggar` : `Loggar`}</button></li>
+            {/* <li><button onClick={() => {setLoggado(!loggado)}}>{loggado ? `Desloggar` : `Loggar`}</button></li> */}
             {/* <li><button onClick={() => {console.log(window.location.href)}}>Console</button></li> */}
             {loggado ? linksLoggado : linksNaoLoggado}
           </ul>
