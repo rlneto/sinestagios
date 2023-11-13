@@ -43,10 +43,10 @@ export default function Login () {
       <div className={`${shared.row} ${shared.marginBottom} ${shared.textAlignCenter}`}>
       <Card>
         <div className={`${styles.title}`}><h1>Login</h1></div>
-        <div className={`${shared.flex} ${shared.column} ${shared.alignCenter }`}>
+        <div className={`${shared.flex} ${shared.column}`}>
           <form className={`${styles.box_form}`}>
-            <InputText tipo='email' nome='email' rotulo='E-mail' referencia={emailRef} />
-          <InputText tipo='password' nome='password' rotulo='Senha' referencia={passwordRef} />
+            <InputText tipo='email' nome='email' rotulo='E-mail' valorPadrao={'pogarrido@earth.com.br'} referencia={emailRef} />
+          <InputText tipo='password' nome='password' rotulo='Senha' referencia={passwordRef} valorPadrao={'quantacoisaboa'}/>
           </form>
         </div>
         <div className={`${styles.btn}`}><Button action={LoginHandler} text={`Entrar`} estilo={shared.btnLogin} /></div>
