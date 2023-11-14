@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useRef } from 'react'
 import { users } from '../db/Database'
+import axios from 'axios'
 import Button from '../components/Button'
 import InputText from '../components/InputText'
 import Card from '../components/Card'
@@ -13,19 +14,44 @@ export default function Register () {
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
   const navegar = useNavigate()
-  const RegisterHandler = () => {
+  const api = axios.create({ baseURL:'https://estagios-ine-api.onrender.com/api/v1/auth/cadastro'})
+  const RegisterHandler = async () => {
     if (passwordRef.current.value === confirmPasswordRef.current.value) {
       const user = {
         nome: nameRef.current.value,
         email: emailRef.current.value,
         password: passwordRef.current.value
       }
-      users.push(user)
-      alert('Usuário cadastrado com sucesso!')
-      navegar('/login')
-  } else {
-    alert('As senhas não conferem')
-  } }
+      try {
+        const response = await api.post('', user)
+        if (response.status === 201) {
+          alert('Usuário cadastrado com sucesso!')
+          navegar('/login')
+        } else {
+          alert('Erro ao cadastrar usuário')
+          navegar('/register')
+        }
+      } catch (error) {
+        alert('Erro ao cadastrar usuário')
+        navegar('/register')
+      }
+    } else {
+      alert('As senhas não conferem')
+    }
+  }
+  // const RegisterHandler = () => {
+  //   if (passwordRef.current.value === confirmPasswordRef.current.value) {
+  //     const user = {
+  //       nome: nameRef.current.value,
+  //       email: emailRef.current.value,
+  //       password: passwordRef.current.value
+  //     }
+  //     users.push(user)
+  //     alert('Usuário cadastrado com sucesso!')
+  //     navegar('/login')
+  // } else {
+  //   alert('As senhas não conferem')
+  // } }
 
   return (
     <div className={`${shared.flex} ${shared.column} ${shared.alignCenter }`}>
