@@ -1,4 +1,4 @@
-import Card from '../components/Card'
+import { Card } from '@mui/material'
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/AllEstagios.module.css'
 import { useNavigate } from 'react-router-dom'
@@ -20,7 +20,8 @@ export default function AllEstagios () {
           {vagas.map(vaga => (
             <li key={vaga.id} className={`${shared.marginBottom}` }  >
               <Card estilo={shared.cardVagas}>
-                <div className={`${shared.flex} ${shared.column} ${styles.card} ${shared.alignCenter}`}>
+                <div className={`${shared.padding20}`}>
+                {/* <div className={`${shared.flex} ${shared.column} ${styles.card} ${shared.alignCenter}`}> */}
                   <h2 className={`${styles.title_vaga}`}>{vaga.titulo}</h2>
                   <h3>{vaga.empresa}</h3>
                   <h4>{vaga.autor}</h4>

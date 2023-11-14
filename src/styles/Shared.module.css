@@ -154,3 +154,10 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.padding10 {
+  padding: 10px 10px 10px 10px;
+}
+.padding20 {
+  padding: 20px 20px 20px 20px;
+}
