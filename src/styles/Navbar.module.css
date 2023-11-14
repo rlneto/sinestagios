@@ -59,3 +59,8 @@
     color: #4169E1;
 }
 
+.toggle_btn {
+    color: #4169E1;
+    font-size: 25px;
+    cursor: pointer;
+}

@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom'
 import Button from './Button'
 import { Link } from 'react-router-dom';
 import lamp from '../assets/lamp.png'
+import {faBars} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Navbar () {
   const { loggado, setLoggado } = useContext(LoggedInContext)
@@ -35,6 +37,7 @@ export default function Navbar () {
           navegar('/')
           }} text={`Sair`}/>
       </li>
+
     </>
   )
 
@@ -62,6 +65,9 @@ export default function Navbar () {
             {loggado ? linksLoggado : linksNaoLoggado}
           </ul>
         </nav>
+      </div>
+      <div className={`${styles.toggle_btn}`}>
+        <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
       </div>
     </div>
   )
