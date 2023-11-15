@@ -40,7 +40,7 @@ export default function Login () {
   const passwordRef = useRef();
   return (
     <div className={`${shared.flex} ${shared.column} ${shared.alignCenter }`}>
-      <div className={`${shared.row} ${shared.marginBottom} ${shared.textAlignCenter}`}>
+      <div className={`${shared.row} ${shared.marginBottom}`}>
       <Card>
         <div className={`${styles.title}`}><h1>Login</h1></div>
         <div className={`${shared.flex} ${shared.column}`}>

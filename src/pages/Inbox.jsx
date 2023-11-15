@@ -29,6 +29,21 @@ export default function Inbox () {
         ))}
         <p></p>
       </ul>
+      <div className={`${shared.row} ${shared.marginBottom}`}>
+      <h3 className={`${shared.marginBottom} ${shared.textAlignCenter}`}>Mensagens Enviadas</h3>
+      <ul>
+        {user.outbox.map((message, index) => (
+          <li className={`${shared.marginBottom}`} key={index}>
+            <Card>
+            <strong>Para:</strong> {message.destinatario}<br />
+            <strong>Título:</strong> {message.titulo}<br />
+            <strong>Mensagem:</strong> {message.mensagem}
+          </Card>
+          </li>
+        ))}
+        <p></p>
+      </ul>
+      </div>
     </div>
   )
 }

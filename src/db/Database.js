@@ -15,24 +15,32 @@ export const users = [
           mensagem: 'Olá Paul, tudo bem? Gostaríamos de saber qual a sua dificuldade em desenvolver algo tão fácil. Você poderia me responder?',
         }
       ],
+      foto: null,
+      outbox: [],
     },
     {
       email: 'insightful@epifania.com',
       password: 'insights',
       nome: 'Alazão Árvore dos Livros',
       inbox: [],
+      foto: null,
+      outbox: [],
     },
     {
       email: 'calvinklein@eps.ufsc.br',
       password: 'lecionandoemny',
       nome: 'Calvin Klein',
       inbox: [],
+      foto: null,
+      outbox: [],
     },
     {
       email: 'muitofacil@inf.ufsc.br',
       password: 'muitofacil',
       nome: 'Aprendendo Muito Fácil',
       inbox: [],
+      foto: null,
+      outbox: [],
     }
   ]
 

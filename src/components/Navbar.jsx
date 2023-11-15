@@ -34,7 +34,7 @@ export default function Navbar () {
         <Button action={() => {
           setLoggado(false)
           setUser(null)
-          navegar('/')
+          navegar('/login')
           }} text={`Sair`}/>
       </li>
 

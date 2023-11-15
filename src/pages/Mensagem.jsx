@@ -1,5 +1,6 @@
 import { useContext, useRef } from 'react'
 import UserContext from '../UserContext'
+import { users } from '../db/Database.js'
 import Card from '../components/Card'
 import InputText from '../components/InputText'
 import Button from '../components/Button'
@@ -25,7 +26,14 @@ export default function Mensagem () {
       data: dataFormatada
     }
     console.log(mensagemObj)
-    alert('Verificar no console (Ctrl + Shift + i) o objeto da mensagem enviada')
+    alert('Verificar no console (Ctrl + Shift + i) o objeto da mensagem')
+    try {
+      users.find(user => user.email === destinatario).inbox.push(mensagemObj)
+      user.outbox.push(mensagemObj)
+    } catch {
+      alert('Erro: Usuário não encontrado')
+    }
+    
   }
 
   return (
