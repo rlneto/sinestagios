@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { vagas } from '../db/Database.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faBriefcase   } from '@fortawesome/free-solid-svg-icons';
-import Button from '../components/Button'
+import Button from '../components/Button';
 
 export default function AllEstagios () {
   const navegar = useNavigate()
@@ -21,7 +21,7 @@ export default function AllEstagios () {
             <li key={vaga.id} className={`${shared.marginBottom}` }  >
               <Card estilo={shared.cardVagas}>
                 <div className={`${shared.padding20}`}>
-                {/* <div className={`${shared.flex} ${shared.column} ${styles.card} ${shared.alignCenter}`}> */}
+                {/* <div className={`${shared.flex} ${shared.column} ${styles.card} ${shared.alignCenter}`}>  */}
                   <h2 className={`${styles.title_vaga}`}>{vaga.titulo}</h2>
                   <h3>{vaga.empresa}</h3>
                   <h4>{vaga.autor}</h4>
