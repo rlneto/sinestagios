@@ -53,6 +53,7 @@ export const vagas = [
         local: 'Palhoça - SC',
         descricao: 'Planejamento estratégico de software para planejamento estratégico da estratégia do planejamento',
         periodo: 'Vespertino',
+        img: '../public/ep-1.png',
       },
       {
         id: 2,
@@ -62,6 +63,7 @@ export const vagas = [
         local: 'Florianópolis - SC',
         descricao: 'Software de verificação de sequentes de tautologias e antilogias',
         periodo: 'Noturno',
+        img: '../public/ep-7.png',
       },
       {
         id: 3,
@@ -71,6 +73,7 @@ export const vagas = [
         local: 'Biguaçu - SC',
         descricao: 'Software para avaliação dos alunos com correção automática, pelo moodle, presencialmente, no LIICT',
         periodo: 'Período integral',
+        img: '../public/ep-4.png',
       },
       {
         id: 4,
@@ -80,6 +83,7 @@ export const vagas = [
         local: 'São José - SC',
         descricao: 'Uma beleza de software!',
         periodo: 'Flexível',
+        img: '../public/ep-5.png',
       },
       {
         id: 5,
@@ -89,5 +93,6 @@ export const vagas = [
         local: 'Antônio Carlos - SC',
         descricao: 'Algo bem fácil de fazer, mas que ninguém consegue fazer.',
         periodo: 'Meio período',
+        img: '../public/ep-6.png',
       }
     ]
