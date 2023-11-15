@@ -123,8 +123,6 @@
 }
 
 .btnVagas {
-  /* margin-top: 0; */
-  /* margin-bottom: 0; */
   width: fit-content;
   height: fit-content;
   padding: 5px 15px;
@@ -142,7 +140,7 @@
   cursor: pointer;
 }
 
-.cardVagas {
+/* .cardVagas {
   border: 2px solid black;
   width: 500px;
   height: 250px;
@@ -153,7 +151,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .padding10 {
   padding: 10px 10px 10px 10px;
