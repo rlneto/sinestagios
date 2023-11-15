@@ -8,7 +8,7 @@ export default function Profile () {
   return (
     <Card>
       <div>
-        { user.profileImage ? <img src={user.profileImage} alt=""/> : '' }
+        { user.foto ? <img src={user.foto} alt=""/> : '' }
       </div>
       <h1>Perfil de {user.nome}</h1>
       <p>Email: {user.email}</p>
