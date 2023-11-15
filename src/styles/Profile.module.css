@@ -1,6 +1,14 @@
 .imgCard {
     border-radius: 50%;
-    width: 100%;
     height: 150px;
     aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.titleNome {
+    font-size: 20px;
+}
+
+.titleEmail {
+    font-size: 15px;
 }

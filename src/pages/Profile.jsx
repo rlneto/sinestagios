@@ -1,39 +1,30 @@
 import { Link } from 'react-router-dom'
+// import { Card } from '@mui/material'
 import Card from '../components/Card'
-import { users, vagas } from '../db/Database.js'
 import styles from '../styles/Profile.module.css'
+import { useContext } from 'react'
+import UserContext from '../UserContext'
+import shared from '../styles/Shared.module.css'
+import Button from '../components/Button'
 
 export default function Profile () {
   const { user } = useContext(UserContext)
   return (
     <div>
       <Card>
-          <div>
+        <div className={`${shared.flex} ${shared.column} ${shared.alignCenter} ${shared.bigGap}`}>
+          <div className={`${shared.flex} ${shared.column} ${shared.alignCenter} ${shared.bigGap}`}>
             <img className={`${styles.imgCard}`} src="../public/p-2.png" alt="" />
-            {/* <div>
-              { user.profileImage ? <img src={user.profileImage} alt=""/> : '' }
-            </div> */}
-            <h1>Perfil de {user.nome}</h1>
-            <p>Email: {user.email}</p>
+            <h1 className={`${styles.titleNome}`}>Perfil de {user.nome}</h1>
+            <p className={`${styles.titleEmail}`}>Email: {user.email}</p>
           </div>
+          <div className={`${shared.flex} ${shared.alignCenter} ${shared.bigGap}`}>
+            <Button action={() => navegar()} text={`Editar Perfil`} estilo={shared.btnVagas}></Button>
+            <Button action={() => navegar()} text={`Ver mensagens`} estilo={shared.btnVagas}></Button>
+          </div>
+        </div>
       </Card>
     </div>
   )
 }
 
-
-
-// export default function Profile () {
-//   const { user } = useContext(UserContext)
-
-//   return (
-//     <Card>
-//       <div>
-//         { user.profileImage ? <img src={user.profileImage} alt=""/> : '' }
-//       </div>
-//       <h1>Perfil de {user.nome}</h1>
-//       <p>Email: {user.email}</p>
-//     </Card>
-    
-//   )
-// }
