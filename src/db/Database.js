@@ -15,7 +15,7 @@ export const users = [
           mensagem: 'Olá Paul, tudo bem? Gostaríamos de saber qual a sua dificuldade em desenvolver algo tão fácil. Você poderia me responder?',
         }
       ],
-      foto: null,
+      foto: '../public/p-2.png',
       outbox: [],
     },
     {

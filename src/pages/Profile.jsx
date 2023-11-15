@@ -14,7 +14,7 @@ export default function Profile () {
       <Card>
         <div className={`${shared.flex} ${shared.column} ${shared.alignCenter} ${shared.bigGap}`}>
           <div className={`${shared.flex} ${shared.column} ${shared.alignCenter} ${shared.bigGap}`}>
-            <img className={`${styles.imgCard}`} src="../public/p-2.png" alt="" />
+            <img className={`${styles.imgCard}`} src={user.foto} alt="" />
             <h1 className={`${styles.titleNome}`}>Perfil de {user.nome}</h1>
             <p className={`${styles.titleEmail}`}>Email: {user.email}</p>
           </div>
