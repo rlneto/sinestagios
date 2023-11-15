@@ -1,6 +1,6 @@
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/Navbar.module.css'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import LoggedInContext from '../LoggedInContext'
 import UserContext from '../UserContext'
 import { useNavigate } from 'react-router-dom'
@@ -13,6 +13,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export default function Navbar () {
   const { loggado, setLoggado } = useContext(LoggedInContext)
   const { setUser } = useContext(UserContext)
+  const [showDropdown, setShowDropDown ]= useState(false)
+
   const navegar = useNavigate();
   const linksLoggado = (
     <>
@@ -35,11 +37,47 @@ export default function Navbar () {
           setLoggado(false)
           setUser(null)
           navegar('/login')
-          }} text={`Sair`}/>
+          }} estilo={`${styles.navbar_btn}`} text={`Sair`}/>
       </li>
 
     </>
   )
+
+  const dropDownMenu = (
+    <div class={`${styles.dropdown_menu}`}>
+        <li>
+          <Link to="/dashboard/all" className={`${styles.nav_link_dropdown}`}>Vagas</Link>
+        </li>
+        <li>
+          <Link to="/dashboard/inbox" className={`${styles.nav_link_dropdown}`}>Inbox</Link>
+        </li>
+        <li>
+          <Link to="/dashboard/profile" className={`${styles.nav_link_dropdown}`}>Perfil</Link>
+        </li>
+        <li>
+          <Link to="/dashboard/mensagem" className={`${styles.nav_link_dropdown}`}>Escrever Mensagem</Link>
+        </li>
+        <li>
+          <Link to="/dashboard/add" className={`${styles.nav_link_dropdown}`}>Criar Vaga</Link>
+        </li>
+        <li>
+        
+          <Button action={() => {
+            setLoggado(false)
+            setUser(null)
+            navegar('/login')
+            }} estilo={`${styles.navbar_btn_dropdown}`} text={`Sair`}/>
+        </li>
+    </div>
+  )
+  
+  function onClickBar() {
+    if (showDropdown) {
+      setShowDropDown(false)
+      return
+    }
+    setShowDropDown(true)
+  }
 
   const linksNaoLoggado = (
     <>
@@ -55,7 +93,7 @@ export default function Navbar () {
     <div className={`${shared.flex} ${shared.alignCenter} ${styles.container}`}>
       <div className={`${shared.flex} ${shared.alignCenter} ${styles.c1}`}>
         <div><img className={`${styles.logo}`} src={lamp}></img></div>
-        <h1>Estágios <span className={`${styles.title_INE}`}>INE</span></h1>
+        <h1>Estágios<span className={`${styles.title_INE}`}>INE</span></h1>
       </div>
       <div className={`${styles.c2}`}>
         <nav>
@@ -67,8 +105,9 @@ export default function Navbar () {
         </nav>
       </div>
       <div className={`${styles.toggle_btn}`}>
-        <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
+        <FontAwesomeIcon icon={faBars} onClick={onClickBar}></FontAwesomeIcon>
       </div>
+    {showDropdown ? dropDownMenu : null}
     </div>
   )
 }
