@@ -4,6 +4,7 @@ import { users, vagas } from '../db/Database.js'
 import styles from '../styles/Profile.module.css'
 
 export default function Profile () {
+  const { user } = useContext(UserContext)
   return (
     <div>
       <Card>
@@ -12,10 +13,27 @@ export default function Profile () {
             {/* <div>
               { user.profileImage ? <img src={user.profileImage} alt=""/> : '' }
             </div> */}
-            <h1>Perfil de {users.nome}</h1>
-            <p>Email: {users.email}</p>
+            <h1>Perfil de {user.nome}</h1>
+            <p>Email: {user.email}</p>
           </div>
       </Card>
     </div>
   )
 }
+
+
+
+// export default function Profile () {
+//   const { user } = useContext(UserContext)
+
+//   return (
+//     <Card>
+//       <div>
+//         { user.profileImage ? <img src={user.profileImage} alt=""/> : '' }
+//       </div>
+//       <h1>Perfil de {user.nome}</h1>
+//       <p>Email: {user.email}</p>
+//     </Card>
+    
+//   )
+// }
