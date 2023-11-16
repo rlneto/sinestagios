@@ -37,7 +37,7 @@ export default function Mensagem () {
   }
 
   return (
-    <div>
+    <div className={`${shared.marginTop}`}>
       <Card>
         <h1>Enviar Mensagem</h1>
         <div>

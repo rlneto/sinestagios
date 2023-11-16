@@ -28,7 +28,7 @@ export default function Register () {
   } }
 
   return (
-    <div className={`${shared.flex} ${shared.column} ${shared.alignCenter }`}>
+    <div className={`${shared.flex} ${shared.column} ${shared.alignCenter} ${shared.marginTop}`}>
       <Card>
       <div className={`${styles.title}`}><h1>Cadastro</h1></div>
       <div>
@@ -37,8 +37,6 @@ export default function Register () {
           <InputText tipo='email' nome='email' rotulo='E-mail' referencia={emailRef} />
           <InputText tipo='password' nome='password' rotulo='Senha' referencia={passwordRef} />
           <InputText tipo='password' nome='confirmPassword' rotulo='Confirme a senha' referencia={confirmPasswordRef} />
-
-          
           </form>
           <div className={`${styles.btn}`}><Button text={`Registrar-se`} action={RegisterHandler} estilo={shared.btnLogin}>Cadastrar</Button></div>
         </div>

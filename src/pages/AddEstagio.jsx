@@ -27,7 +27,7 @@ export default function AddEstagio () {
   }
 
   return (
-    <div className={`${shared.flex} ${shared.column}`}>
+    <div className={`${shared.flex} ${shared.column} ${shared.marginTop}`}>
       <Card>
         <h1>Cadastrar vaga</h1>
         <div>
