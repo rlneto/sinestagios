@@ -73,6 +73,10 @@
   flex-wrap: wrap;
 }
 
+.colorBlue {
+  color: #4169E1;
+}
+
 .nav_link {
     text-decoration: none;
     color: #4169E1;
@@ -153,4 +157,13 @@
 
 .card {
   background-color: pink;
+}
+
+
+.marginTop{
+  margin-top: 40px;
+}
+
+.textSize12 {
+  font-size: 12px;
 }
