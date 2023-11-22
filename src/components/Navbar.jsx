@@ -91,9 +91,9 @@ export default function Navbar () {
   )
   return (
     <div className={`${shared.flex} ${shared.alignCenter} ${styles.container}`}>
-      <div className={`${shared.flex} ${shared.alignCenter} ${styles.c1}`}>
+      <div className={`${shared.flex} ${shared.textAlignStart} ${styles.c1}`}>
         <div><img className={`${styles.logo}`} src={lamp}></img></div>
-        <h1>Estágios<span className={`${styles.title_INE}`}>INE</span></h1>
+        <h1 className={`${styles.h1}`}> Estágios<span className={`${styles.title_INE}`}> INE</span></h1>
       </div>
       <div className={`${styles.c2}`}>
         <nav>

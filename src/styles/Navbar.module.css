@@ -62,8 +62,8 @@
     color: #4169E1;
     font-size: 25px;
     cursor: pointer;
-    margin-right: 60px;
     display: none;
+    margin-right: 20px;
 }
 
 
@@ -128,14 +128,18 @@
 }
 
 
-@media (max-width: 414px) {
+@media (max-width: 919px) {
     .nav_link, 
     .navbar_btn {
         display: none;
     }
 
+    .c2 {
+        display: none;
+    }
+
     .toggle_btn {
-        display: block;
+        display: flex;
     }
 
     .dropdown_menu {
