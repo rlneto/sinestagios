@@ -32,6 +32,9 @@ export default function Navbar () {
         <Link to="/dashboard/add" className={`${styles.nav_link}`}>Criar Vaga</Link>
       </li>
       <li>
+        <Link to="/dashboard/sobre" className={`${styles.nav_link}`}>Sobre</Link>
+      </li>
+      <li>
       
         <Button action={() => {
           setLoggado(false)
@@ -44,7 +47,7 @@ export default function Navbar () {
   )
 
   const dropDownMenu = (
-    <div class={`${styles.dropdown_menu}`}>
+    <div className={`${styles.dropdown_menu}`}>
         <li>
           <Link to="/dashboard/all" className={`${styles.nav_link_dropdown}`}>Vagas</Link>
         </li>
@@ -58,7 +61,10 @@ export default function Navbar () {
           <Link to="/dashboard/mensagem" className={`${styles.nav_link_dropdown}`}>Escrever Mensagem</Link>
         </li>
         <li>
-          <Link to="/dashboard/add" className={`${styles.nav_link_dropdown}`}>Criar Vaga</Link>
+          <Link to="/dashboard/add" className={`${styles.nav_link_dropdown}`}>Criar vaga</Link>
+        </li>
+        <li>
+          <Link to="/dashboard/sobre" className={`${styles.nav_link_dropdown}`}>Sobre</Link>
         </li>
         <li>
         
