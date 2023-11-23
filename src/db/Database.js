@@ -53,7 +53,7 @@ export const vagas = [
         local: 'Palhoça - SC',
         descricao: 'Planejamento estratégico de software para planejamento estratégico da estratégia do planejamento',
         periodo: 'Vespertino',
-        img: '../public/ep-1.png',
+        img: 'https://cdn2.hubspot.net/hubfs/2961792/sistemas%20da%20informacao.jpg',
       },
       {
         id: 2,
@@ -63,7 +63,7 @@ export const vagas = [
         local: 'Florianópolis - SC',
         descricao: 'Software de verificação de sequentes de tautologias e antilogias',
         periodo: 'Noturno',
-        img: '../public/ep-7.png',
+        img: 'https://st2.depositphotos.com/3396639/6920/i/450/depositphotos_69202465-stock-photo-man-working-on-his-laptop.jpg',
       },
       {
         id: 3,
@@ -73,7 +73,7 @@ export const vagas = [
         local: 'Biguaçu - SC',
         descricao: 'Software para avaliação dos alunos com correção automática, pelo moodle, presencialmente, no LIICT',
         periodo: 'Período integral',
-        img: '../public/ep-4.png',
+        img: 'https://simulare.com.br/wp-content/uploads/SIC.png',
       },
       {
         id: 4,
@@ -83,7 +83,7 @@ export const vagas = [
         local: 'São José - SC',
         descricao: 'Uma beleza de software!',
         periodo: 'Flexível',
-        img: '../public/ep-5.png',
+        img: 'https://ichef.bbci.co.uk/news/640/cpsprodpb/0c32/live/cded1510-e022-11ed-a98d-c97c7a23fa41.jpg',
       },
       {
         id: 5,
@@ -93,6 +93,6 @@ export const vagas = [
         local: 'Antônio Carlos - SC',
         descricao: 'Algo bem fácil de fazer, mas que ninguém consegue fazer.',
         periodo: 'Meio período',
-        img: '../public/ep-6.png',
+        img: 'https://www.aquare.la/wp-content/uploads/Imagens-Blog107-1080x675.jpg',
       }
     ]
