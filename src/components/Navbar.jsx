@@ -70,6 +70,17 @@ export default function Navbar () {
         </li>
     </div>
   )
+
+  const dropDownMenuNaoLogado = (
+    <div class={`${styles.dropdown_menu}`}>
+      <li>
+        <Link to="/register" className={`${styles.nav_link_dropdown}`}>Cadastro</Link>
+      </li>
+      <li >
+        <Button action={() => {navegar('/login')}} text={`Login`} estilo={styles.navbar_btn_dropdown}/>
+      </li>
+    </div>
+  )
   
   function onClickBar() {
     if (showDropdown) {
@@ -107,7 +118,10 @@ export default function Navbar () {
       <div className={`${styles.toggle_btn}`}>
         <FontAwesomeIcon icon={faBars} onClick={onClickBar}></FontAwesomeIcon>
       </div>
-    {showDropdown ? dropDownMenu : null}
+    {showDropdown && loggado ? dropDownMenu : null}
+    {showDropdown && !loggado ? dropDownMenuNaoLogado : null}
+
+
     </div>
   )
 }
