@@ -45,9 +45,13 @@ export default function AddEstagio () {
         <div>
           <InputText tipo={'text'} nome={'periodo'} rotulo={'Período'} valorPadrao={'Período'} referencia={periodoRef}/>
         </div>
+        <div>
+          <InputText tipo={'text'} nome={'imagem'} rotulo={'Link da Imagem'} valorPadrao={'Link da Imagem'} referencia={periodoRef}/>
+        </div>
         <div className={`${shared.marginTop}`}>
           <Button action={cadastrarVaga} text={'Enviar'} estilo={shared.btn}/>
         </div>
+
       </Card>
     </div>
   )
