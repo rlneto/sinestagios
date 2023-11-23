@@ -17,6 +17,7 @@ import {
   Register,
   Inbox
 } from './pages'
+import Sobre from "./pages/Sobre";
 
 
 const router = createBrowserRouter([
@@ -91,6 +92,11 @@ const router = createBrowserRouter([
       {
         path: "profile",
         element: <Profile />,
+        errorElement: <Error />,
+      },
+      {
+        path: "sobre",
+        element: <Sobre/>,
         errorElement: <Error />,
       }]
     },

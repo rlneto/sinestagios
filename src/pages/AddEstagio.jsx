@@ -13,6 +13,7 @@ export default function AddEstagio () {
   const localRef = useRef()
   const descricaoRef = useRef()
   const periodoRef = useRef()
+  const imagemRef = useRef()
   const cadastrarVaga = () => {
     const novaVaga = {
       empresa: empresaRef.current.value,
@@ -20,7 +21,8 @@ export default function AddEstagio () {
       local: localRef.current.value,
       descricao: descricaoRef.current.value,
       periodo: periodoRef.current.value,
-      criador: user.email
+      criador: user.email,
+      imagem: imagemRef.current.value,
     }
     vagas.push(novaVaga)
     alert('Vaga cadastrada com sucesso!')
@@ -45,9 +47,13 @@ export default function AddEstagio () {
         <div>
           <InputText tipo={'text'} nome={'periodo'} rotulo={'Período'} valorPadrao={'Período'} referencia={periodoRef}/>
         </div>
+        <div>
+          <InputText tipo={'text'} nome={'imagem'} rotulo={'Link da Imagem'} valorPadrao={'Link da Imagem'} referencia={imagemRef}/>
+        </div>
         <div className={`${shared.marginTop}`}>
           <Button action={cadastrarVaga} text={'Enviar'} estilo={shared.btn}/>
         </div>
+
       </Card>
     </div>
   )
