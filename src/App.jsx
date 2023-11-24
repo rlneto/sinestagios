@@ -15,7 +15,8 @@ import {
   Mensagem,
   Profile,
   Register,
-  Inbox
+  Inbox,
+  UpdateUser
 } from './pages'
 import Sobre from "./pages/Sobre";
 
@@ -98,7 +99,13 @@ const router = createBrowserRouter([
         path: "sobre",
         element: <Sobre/>,
         errorElement: <Error />,
-      }]
+      },
+      {
+        path: "atualizar-usuario",
+        element: <UpdateUser />,
+        errorElement: <Error />,
+      },
+    ]
     },
     {
       path: "*",
