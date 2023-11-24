@@ -17,9 +17,14 @@ export default function Profile () {
             <img className={`${styles.imgCard}`} src={user.foto} alt="" />
             <h1 className={`${styles.titleNome}`}>Perfil de {user.nome}</h1>
             <p className={`${styles.titleEmail}`}>Email: {user.email}</p>
+            <p className={`${styles.titleEmail}`}>Genero: {user.genero}</p>
+            <p className={`${styles.titleEmail}`}>Data de Nascimento: {user.dataNasc}</p>
+
           </div>
           <div className={`${shared.flex} ${shared.alignCenter} ${shared.bigGap}`}>
-            <Button action={() => navegar()} text={`Editar Perfil`} estilo={shared.btnVagas}></Button>
+          <Link to="/dashboard/atualizar-usuario">
+            <Button text={`Editar Perfil`} estilo={shared.btnVagas}></Button>
+          </Link>
             <Button action={() => navegar()} text={`Ver mensagens`} estilo={shared.btnVagas}></Button>
           </div>
         </div>

@@ -78,7 +78,7 @@ export default function Navbar () {
   )
 
   const dropDownMenuNaoLogado = (
-    <div class={`${styles.dropdown_menu}`}>
+    <div className={`${styles.dropdown_menu}`}>
       <li>
         <Link to="/register" className={`${styles.nav_link_dropdown}`}>Cadastro</Link>
       </li>
