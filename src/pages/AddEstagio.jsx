@@ -21,7 +21,7 @@ export default function AddEstagio () {
       local: localRef.current.value,
       descricao: descricaoRef.current.value,
       periodo: periodoRef.current.value,
-      criador: user.email,
+      autor: user.email,
       imagem: imagemRef.current.value,
     }
     vagas.push(novaVaga)
