@@ -12,3 +12,5 @@ export { default as Mensagem } from './Mensagem';
 export { default as Profile } from './Profile';
 export { default as Register } from './Register';
 export { default as Inbox } from './Inbox';
+export { default as UpdateUser } from './UpdateUser';
+
