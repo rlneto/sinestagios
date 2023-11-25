@@ -15,7 +15,7 @@ export const users = [
           mensagem: 'Olá Paul, tudo bem? Gostaríamos de saber qual a sua dificuldade em desenvolver algo tão fácil. Você poderia me responder?',
         }
       ],
-      foto: 'https://cdn-icons-png.flaticon.com/512/21/21104.png',
+      foto: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
       outbox: [],
     },
     {
