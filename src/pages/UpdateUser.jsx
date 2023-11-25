@@ -14,6 +14,7 @@ export default function UpdateUser () {
   const emailRef = useRef();
   const birthDateRef = useRef();
   const genderRef = useRef();
+  const fotoRef = useRef();
   const navegar = useNavigate()
   const { user } = useContext(UserContext)
   const api = axios.create({
@@ -27,6 +28,7 @@ export default function UpdateUser () {
     //     nome: nameRef.current.value,
     //     dataNasc: emailRef.current.value,
     //     genero: genderRef.current.value,
+    //     imagem: imagemRef.current.value,
     // })
 
     //comentar da linha 33 a 40 quando for rodar com o backend
@@ -35,6 +37,7 @@ export default function UpdateUser () {
             users[i].nome = nameRef.current.value;
             users[i].dataNasc = birthDateRef.current.value;
             users[i].genero = genderRef.current.value;
+            users[i].foto = fotoRef.current.value;
           break;
         }
       }
@@ -53,6 +56,7 @@ export default function UpdateUser () {
           <InputText tipo='text' nome='name' rotulo='Nome' referencia={nameRef} />
           <InputText tipo='date' nome='birthDate' rotulo='Data de Nascimento' referencia={birthDateRef} />
           <InputText tipo='text' nome='gender' rotulo='Gênero' referencia={genderRef} />
+          <InputText tipo='text' nome='foto' rotulo='Link da Imagem' valorPadrao='Link da Imagem' referencia={fotoRef}/>
           </form>
           <div className={`${styles.btn}`}><Button text={`Atualizar`} action={UpdateHandler} estilo={shared.btnLogin}>Cadastrar</Button></div>
         </div>
