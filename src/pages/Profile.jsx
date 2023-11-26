@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate  } from 'react-router-dom'
 // import { Card } from '@mui/material'
 import Card from '../components/Card'
 import styles from '../styles/Profile.module.css'
@@ -9,6 +9,8 @@ import Button from '../components/Button'
 
 export default function Profile () {
   const { user } = useContext(UserContext)
+  const navegar = useNavigate()
+  console.log(user.foto)
   return (
     <div>
       <Card>
@@ -25,9 +27,7 @@ export default function Profile () {
           <Link to="/dashboard/atualizar-usuario">
             <Button text={`Editar Perfil`} estilo={shared.btnVagas}></Button>
           </Link>
-          <Link to="/dashboard/inbox">
-            <Button action={() => navegar()} text={`Ver mensagens`} estilo={shared.btnVagas}></Button>
-          </Link>
+            <Button action={() => navegar('/dashboard/inbox')} text={`Ver mensagens`} estilo={shared.btnVagas}></Button>
           </div>
         </div>
       </Card>
