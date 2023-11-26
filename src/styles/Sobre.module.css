@@ -1,5 +1,5 @@
 .title {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
     font-size: 25px;
     color: #4169E1;
@@ -9,4 +9,19 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: black;
+    border: 2px;
+}
+
+.img_card {
+    width: 600px; /* largura do card */
+    height: 350px; /* altura do card */
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    overflow: hidden; /* para esconder partes da imagem que excedem o card */
+}
+
+.img {
+    width: 100%; /* ocupar toda a largura do card */
+    height: auto; /* altura automática para manter a proporção */
+    object-fit: cover; 
 }
