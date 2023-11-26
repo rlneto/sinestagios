@@ -25,7 +25,9 @@ export default function Profile () {
           <Link to="/dashboard/atualizar-usuario">
             <Button text={`Editar Perfil`} estilo={shared.btnVagas}></Button>
           </Link>
+          <Link to="/dashboard/inbox">
             <Button action={() => navegar()} text={`Ver mensagens`} estilo={shared.btnVagas}></Button>
+          </Link>
           </div>
         </div>
       </Card>
