@@ -17,7 +17,10 @@ _Stack utilizada: MERN_
 - _Node.js_
 - _Express.js_
 - _Mongoose_
+  
 **Peortótipo para o Design:** https://whimsical.com/trab-web-5ZtyzQn4Qg9PZxqPYu8ypr
+
+
 ## CSS
 
 _O CSS está presente em dois módulos, o Shared.modules.css e o relativo ao componente (por exemplo HomeLayout.modules.css), presentes na pasta src/styles/_
