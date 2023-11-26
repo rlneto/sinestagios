@@ -27,13 +27,13 @@ _Os módulos são carregados no css e cada propriedade possui uma classe própri
 ## Single Page Application (SPA)
 O frontend é uma Single Page Application (SPA) desenvolvida com o uso de React. A estrutura básica consiste em três componentes principais:
 
-Navbar
+Navbar:
 O componente Navbar representa a barra de navegação superior. Ele contém links e elementos de navegação importantes para a aplicação.
 
-Outlet
+Outlet:
 O componente Outlet é onde os diferentes componentes são renderizados dinamicamente, dependendo da rota atual. Ele funciona como o ponto de entrada principal para os diversos conteúdos exibidos na aplicação.
 
-Footer
+Footer:
 O componente Footer representa o rodapé da página. Ele contém informações adicionais e links úteis.
 
 Context API para Compartilhamento de Estado do Usuário
