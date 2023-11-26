@@ -31,7 +31,7 @@ export default function Sobre() {
                     </p>
                 </div>
                 <div className= {`${styles.img_card}`}>
-                    <img className= {`${styles.img}`} src='\public\ufsc-20felipe-20carneiro_5_3.png' alt="Imagem UFSC"/>
+                    <img className= {`${styles.img}`} src='\public\ufsc.png' alt="Imagem UFSC"/>
                 </div>
             </div>
         </div>
