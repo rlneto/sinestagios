@@ -27,6 +27,7 @@ export default function Login () {
         email: email,
         password: password
       })
+      console.log(response.status)
       const user = response.data.user
       setUser(user)
       setLoggado(true)

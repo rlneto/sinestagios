@@ -25,6 +25,7 @@ export default function Register () {
       }
       try {
         const response = await api.post('', user)
+        console.log(response.status)
         if (response.status === 201) {
           alert('Usuário cadastrado com sucesso!')
           setLoading(false)
