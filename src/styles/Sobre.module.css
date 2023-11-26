@@ -13,15 +13,22 @@
 }
 
 .img_card {
-    width: 600px; /* largura do card */
-    height: 350px; /* altura do card */
+    width: 600px;
+    height: 350px; 
     border: 1px solid #ccc; 
     border-radius: 8px;
-    overflow: hidden; /* para esconder partes da imagem que excedem o card */
+    overflow: hidden; 
 }
+
+
 
 .img {
     width: 100%; /* ocupar toda a largura do card */
     height: auto; /* altura automática para manter a proporção */
-    object-fit: cover; 
+    object-fit: cover;
+}
+
+.card_text {
+    width: 600px; 
+    height: 350px;
 }

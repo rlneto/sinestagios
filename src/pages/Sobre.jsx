@@ -4,25 +4,30 @@ import styles from '../styles/Sobre.module.css'
 export default function Sobre() {
     return (
         <div className={`${shared.flex} ${shared.column} ${shared.alignCenter}`}>
-            <div className={`${shared.row} ${shared.marginBottom} ${shared.textAlignCenter}`}>
+            <div className={`${shared.row} ${shared.marginBottom} ${shared.marginBottom} ${shared.textAlignCenter}`}>
                 <h1 className={`${styles.title}`}>Vagas de estágio</h1>
             </div>
-            <div className={`${shared.flex} ${shared.alignCenter} ${shared.bigGap}`} > 
-                <p className= {`${styles.body}`}> <div>Caro(a) Estudante,</div>
-<div className='body'>Seja bem-vindo(a) ao nosso Sistema de Vagas de Estágio!
-Nós entendemos a importância vital do estágio na jornada acadêmica. Por isso, estamos comprometidos em oferecer oportunidades excepcionais para você desenvolver suas habilidades e experiência prática.Nosso sistema é projetado para simplificar e facilitar o processo de busca por estágios, conectando você a uma ampla gama de oportunidades em diferentes áreas e empresas parceiras.
-Ao usar nosso sistema, você terá acesso a:
+            <div className={`${shared.flex} ${shared.alignCenter} ${shared.bigGap}`} >
+                <div className={`${shared.flex} ${shared.column}  ${shared.bigGap} ${shared.justifyCenter} ${styles.card_text}`}>
+                    <p>
+                        Seja bem-vindo(a) ao nosso Sistema de Vagas de Estágio!<br></br>
+                        Nós entendemos a importância vital do estágio na jornada acadêmica. Por isso, estamos comprometidos em oferecer oportunidades excepcionais para você desenvolver suas habilidades e experiência prática.Nosso sistema é projetado para simplificar e facilitar o processo de busca por estágios, conectando você a uma ampla gama de oportunidades em diferentes áreas e empresas parceiras.
+                        Ao usar nosso sistema, você terá acesso a:
+                    </p>
+                    <p>
+                        - Uma variedade de vagas de estágio em empresas renomadas.<br></br>
+                        - Recursos para aprimorar suas habilidades profissionais.<br></br>
+                        - Suporte personalizado durante todo o processo de candidatura.<br></br>
+                        - Queremos ajudá-lo a alcançar seus objetivos profissionais e impulsionar sua carreira desde o início.<br></br>
 
-- Uma variedade de vagas de estágio em empresas renomadas.
-- Recursos para aprimorar suas habilidades profissionais.
-- Suporte personalizado durante todo o processo de candidatura.
-- Queremos ajudá-lo a alcançar seus objetivos profissionais e impulsionar sua carreira desde o início.
-
-Junte-se a nós nesta jornada de aprendizado e crescimento profissional. </div>
-
-<div>Atenciosamente,
-Alunos da Terceira Fase de Sistemas de Informação</div>
-</p>
+                        Junte-se a nós nesta jornada de aprendizado e crescimento profissional.<br></br>
+                    </p>
+                    <p>
+                        Atenciosamente,<br></br>
+                        Alunos da Terceira Fase de Sistemas de Informação
+                        
+                    </p>
+                </div>
                 <div className= {`${styles.img_card}`}>
                     <img className= {`${styles.img}`} src='\public\ufsc-20felipe-20carneiro_5_3.png' alt="Imagem UFSC"/>
                 </div>
