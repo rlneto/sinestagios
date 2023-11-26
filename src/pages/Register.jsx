@@ -56,7 +56,7 @@ export default function Register () {
           <InputText tipo='password' nome='password' rotulo='Senha' referencia={passwordRef} />
           <InputText tipo='password' nome='confirmPassword' rotulo='Confirme a senha' referencia={confirmPasswordRef} />
           </form>
-          <Button fullWidth onClick={RegisterHandler} variant="contained" color="primary" className={`${styles.btn}`} disabled={loading}>{loading ? <CircularProgress size={24} /> : 'Entrar'}</Button>
+          <Button fullWidth onClick={RegisterHandler} variant="contained" color="primary" className={`${styles.btn}`} disabled={loading}>{loading ? <CircularProgress size={24} /> : 'Cadastrar-se'}</Button>
         </div>
         <div className={`${shared.marginTop} ${shared.textAlignCenter}`}>
           <span>Já possui cadastro?</span>
