@@ -167,3 +167,11 @@
 .textSize12 {
   font-size: 12px;
 }
+
+.wrap{
+  flex-wrap: wrap;
+}
+
+.max80vw {
+  max-width: 80vw;
+}
