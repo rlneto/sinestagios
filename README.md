@@ -17,6 +17,9 @@ _Stack utilizada: MERN_
 - _Node.js_
 - _Express.js_
 - _Mongoose_
+  
+**Protótipo para o Design:** https://whimsical.com/trab-web-5ZtyzQn4Qg9PZxqPYu8ypr
+
 
 ## CSS
 
