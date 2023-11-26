@@ -20,15 +20,35 @@
     overflow: hidden; 
 }
 
-
-
 .img {
-    width: 100%; /* ocupar toda a largura do card */
-    height: auto; /* altura automática para manter a proporção */
+    width: 100%; 
+    height: auto; 
     object-fit: cover;
 }
 
 .card_text {
     width: 600px; 
     height: 350px;
+}
+
+.paragrafo {
+    text-align: justify;
+}
+
+@media (max-width: 600px) {
+
+    .img_card {
+        height: 200px;
+        width: 100%;
+        margin-top: 130px;
+    }
+
+    .card_text {
+        width: 100%;
+        margin-top: 90px;
+    }
+
+    .cardd {
+        padding: 20px;
+    }
 }
