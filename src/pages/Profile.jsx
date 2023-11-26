@@ -10,7 +10,7 @@ import Button from '../components/Button'
 export default function Profile () {
   const { user } = useContext(UserContext)
   const navegar = useNavigate()
-  console.log(user.foto)
+  console.log(user)
   return (
     <div>
       <Card>
