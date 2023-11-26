@@ -7,7 +7,7 @@ export default function Sobre() {
             <div className={`${shared.row} ${shared.marginBottom} ${shared.marginBottom} ${shared.textAlignCenter}`}>
                 <h1 className={`${styles.title}`}>Vagas de estágio</h1>
             </div>
-            <div className={`${shared.flex} ${shared.alignCenter} ${shared.bigGap}`} >
+            <div className={`${shared.row} ${shared.wrap} ${shared.max80vw}${shared.alignCenter} ${shared.bigGap}`} >
                 <div className={`${shared.flex} ${shared.column}  ${shared.bigGap} ${shared.justifyCenter} ${styles.card_text}`}>
                     <p>
                         Seja bem-vindo(a) ao nosso Sistema de Vagas de Estágio!<br></br>
