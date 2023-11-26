@@ -36,5 +36,5 @@ O componente Outlet é onde os diferentes componentes são renderizados dinamica
 Footer:
 O componente Footer representa o rodapé da página. Ele contém informações adicionais e links úteis.
 
-### Context API para Compartilhamento de Estado do Usuário: 
+#### Context API para Compartilhamento de Estado do Usuário 
 Para gerenciar o estado do usuário em toda a aplicação, foi utilizada a Context API do React. Essa API permite compartilhar o estado do usuário com todos os componentes da aplicação sem a necessidade de passar props manualmente entre componentes aninhados.
