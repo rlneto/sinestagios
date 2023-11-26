@@ -14,10 +14,10 @@ export default function Profile () {
       <Card>
         <div className={`${shared.flex} ${shared.column} ${shared.alignCenter} ${shared.bigGap}`}>
           <div className={`${shared.flex} ${shared.column} ${shared.alignCenter} ${shared.bigGap}`}>
-            <img className={`${styles.imgCard}`} src={user.foto} alt="" />
+            <img className={`${styles.imgCard}`} src={user.foto || 'https://cdn-icons-png.flaticon.com/512/149/149071.png'} alt="" />
             <h1 className={`${styles.titleNome}`}>Perfil de {user.nome}</h1>
             <p className={`${styles.titleEmail}`}>Email: {user.email}</p>
-            <p className={`${styles.titleEmail}`}>Genero: {user.genero}</p>
+            <p className={`${styles.titleEmail}`}>Gênero: {user.genero}</p>
             <p className={`${styles.titleEmail}`}>Data de Nascimento: {user.dataNasc}</p>
 
           </div>
