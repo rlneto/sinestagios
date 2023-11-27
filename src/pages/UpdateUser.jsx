@@ -16,7 +16,6 @@ export default function UpdateUser () {
   // const fotoRef = useRef();
   const navegar = useNavigate()
   const { user } = useContext(UserContext)
-  const { setUser } = useContext(UserContext)
     const [loading, setLoading] = useState(false)
   const api = axios.create({
     baseURL: 'https://estagios-ine-api.onrender.com/api/v1/auth/update'
@@ -45,7 +44,7 @@ export default function UpdateUser () {
       console.log(error)
       alert('Erro ao atualizar perfil')
       setLoading(false)
-      navegar('/login')
+      navegar('/dashboard/profile')
     }
 
 
@@ -62,7 +61,7 @@ export default function UpdateUser () {
 
 
 
-   }
+  }
 
   return (
     <div className={`${shared.flex} ${shared.column} ${shared.alignCenter} ${shared.marginTop}`}>

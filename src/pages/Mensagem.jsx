@@ -38,6 +38,7 @@ export default function Mensagem () {
       console.log(response.status)
       if (response.status === 201) {
         alert('Mensagem enviada com sucesso!')
+        user.outbox.push(mensagemObj)
         setLoading(false)
         navegar('/dashboard/inbox')
       } else {
