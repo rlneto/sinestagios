@@ -1,6 +1,6 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useRef, useContext} from 'react'
-import { users } from '../db/Database'
+// import { users } from '../db/Database'
 import Button from '../components/Button'
 import InputText from '../components/InputText'
 import Card from '../components/Card'
@@ -22,25 +22,25 @@ export default function UpdateUser () {
   })
 
   const UpdateHandler = () => {
-    //descomentar linhas 25 a 30 quando for rodar com o backend
-    // api.put('', {
-    //     email: user.email,
-    //     nome: nameRef.current.value,
-    //     dataNasc: emailRef.current.value,
-    //     genero: genderRef.current.value,
-    //     imagem: imagemRef.current.value,
-    // })
+    //descomentar linhas 26 a 32 quando for rodar com o backend
+    api.put('', {
+        email: user.email,
+        nome: nameRef.current.value,
+        dataNasc: emailRef.current.value,
+        genero: genderRef.current.value,
+        imagem: fotoRef.current.value,
+    })
 
-    //comentar da linha 33 a 40 quando for rodar com o backend
-    for (var i = 0; i < users.length; i++) {
-        if (users[i].email === user.email) {
-            users[i].nome = nameRef.current.value;
-            users[i].dataNasc = birthDateRef.current.value;
-            users[i].genero = genderRef.current.value;
-            users[i].foto = fotoRef.current.value;
-          break;
-        }
-      }
+    //comentar da linha 35 a 43 quando for rodar com o backend
+    // for (var i = 0; i < users.length; i++) {
+    //     if (users[i].email === user.email) {
+    //         users[i].nome = nameRef.current.value;
+    //         users[i].dataNasc = birthDateRef.current.value;
+    //         users[i].genero = genderRef.current.value;
+    //         users[i].foto = fotoRef.current.value;
+    //       break;
+    //     }
+    //   }
 
     alert('Usuário atualizado com sucesso!')
     navegar('/dashboard/profile')
@@ -58,7 +58,7 @@ export default function UpdateUser () {
           <InputText tipo='text' nome='gender' rotulo='Gênero' referencia={genderRef} />
           <InputText tipo='text' nome='foto' rotulo='Link da Imagem' valorPadrao='Link da Imagem' referencia={fotoRef}/>
           </form>
-          <div className={`${styles.btn}`}><Button text={`Atualizar`} action={UpdateHandler} estilo={shared.btnLogin}>Cadastrar</Button></div>
+          <div className={`${styles.btn}`}><Button text={`Atualizar`} action={UpdateHandler} estilo={shared.btnLogin}>Atualizar</Button></div>
         </div>
         </Card>
       </div>
