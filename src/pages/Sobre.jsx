@@ -1,5 +1,6 @@
 import shared from '../styles/Shared.module.css'
 import styles from '../styles/Sobre.module.css'
+import ufsc from '../assets/ufsc.png'
 
 export default function Sobre() {
     return (
@@ -31,7 +32,7 @@ export default function Sobre() {
                     </p>
                 </div>
                 <div className= {`${styles.img_card}`}>
-                    <img className= {`${styles.img}`} src='\public\ufsc.png' alt="Imagem UFSC"/>
+                    <img className= {`${styles.img}`} src={ufsc} alt="Imagem UFSC"/>
                 </div>
             </div>
         </div>
