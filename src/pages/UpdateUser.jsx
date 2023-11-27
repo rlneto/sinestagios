@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
-import { useRef, useContext} from 'react'
+import { useRef, useContext, useState } from 'react'
 // import { users } from '../db/Database'
-import Button from '../components/Button'
+import { Button, CircularProgress } from '@mui/material'
 import InputText from '../components/InputText'
 import Card from '../components/Card'
 import shared from '../styles/Shared.module.css'
@@ -17,19 +17,33 @@ export default function UpdateUser () {
   const fotoRef = useRef();
   const navegar = useNavigate()
   const { user } = useContext(UserContext)
+    const [loading, setLoading] = useState(false)
   const api = axios.create({
     baseURL: 'https://estagios-ine-api.onrender.com/api/v1/update'
   })
 
   const UpdateHandler = () => {
+    setLoading(true)
     //descomentar linhas 26 a 32 quando for rodar com o backend
-    api.put('', {
+    try {
+      api.post('', {
         email: user.email,
         nome: nameRef.current.value,
         dataNasc: emailRef.current.value,
         genero: genderRef.current.value,
         imagem: fotoRef.current.value,
     })
+    alert('Usuário atualizado com sucesso!')
+    setLoading(false)
+    navegar('/dashboard/profile')
+
+    } catch (error) {
+      console.log(error)
+      alert('Erro ao atualizar perfil')
+      setLoading(false)
+      navegar('/login')
+    }
+
 
     //comentar da linha 35 a 43 quando for rodar com o backend
     // for (var i = 0; i < users.length; i++) {
@@ -42,8 +56,7 @@ export default function UpdateUser () {
     //     }
     //   }
 
-    alert('Usuário atualizado com sucesso!')
-    navegar('/dashboard/profile')
+
 
    }
 
@@ -58,7 +71,9 @@ export default function UpdateUser () {
           <InputText tipo='text' nome='gender' rotulo='Gênero' referencia={genderRef} />
           <InputText tipo='text' nome='foto' rotulo='Link da Imagem' valorPadrao='Link da Imagem' referencia={fotoRef}/>
           </form>
+
           <div className={`${styles.btn}`}><Button text={`Atualizar`} action={UpdateHandler} estilo={shared.btnLogin}>Atualizar</Button></div>
+          <Button fullWidth onClick={UpdateHandler} variant="contained" color="primary" className={`${styles.btn}`} disabled={loading}>{loading ? <CircularProgress size={24} /> : 'Cadastrar-se'}</Button>
         </div>
         </Card>
       </div>
