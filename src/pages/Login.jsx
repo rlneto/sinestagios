@@ -49,7 +49,7 @@ export default function Login () {
         <div className={`${styles.title}`}><h1>Login</h1></div>
         <div className={`${shared.flex} ${shared.column} ${shared.marginBottom}`}>
           <form className={`${styles.box_form}`}>
-            <InputText tipo='email' nome='email' rotulo='E-mail' valorPadrao={'pogarrido@earth.com.br'} referencia={emailRef} />
+            <InputText tipo='email' nome='email' rotulo='E-mail' valorPadrao={'paulgarrido@earth.com.br'} referencia={emailRef} />
           <InputText tipo='password' nome='password' rotulo='Senha' referencia={passwordRef} valorPadrao={'quantacoisaboa'}/>
           </form>
         </div>
