@@ -47,20 +47,6 @@ export default function UpdateUser () {
       navegar('/dashboard/profile')
     }
 
-
-    //comentar da linha 35 a 43 quando for rodar com o backend
-    // for (var i = 0; i < users.length; i++) {
-    //     if (users[i].email === user.email) {
-    //         users[i].nome = nameRef.current.value;
-    //         users[i].dataNasc = birthDateRef.current.value;
-    //         users[i].genero = genderRef.current.value;
-    //         users[i].foto = fotoRef.current.value;
-    //       break;
-    //     }
-    //   }
-
-
-
   }
 
   return (

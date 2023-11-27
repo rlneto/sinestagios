@@ -42,6 +42,7 @@ export default function Register () {
       }
     } else {
       alert('As senhas não conferem')
+      navegar('/register')
     }
   }
 
