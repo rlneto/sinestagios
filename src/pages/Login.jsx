@@ -28,7 +28,8 @@ export default function Login () {
         password: password
       })
       console.log(response.status)
-      const user = response.data.user
+      console.log(response)
+      const user = response.data.usuario
       setUser(user)
       setLoggado(true)
       setLoading(false)

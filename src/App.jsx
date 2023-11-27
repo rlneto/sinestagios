@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useState } from 'react'
 import UserContext from './UserContext'
+import { UserProvider } from './UserContext'
 import LoggedInContext from "./LoggedInContext";
 import {
   AddEstagio,
@@ -119,11 +120,18 @@ const App = () => {
   const [user, setUser] = useState(null)
   return (
     <LoggedInContext.Provider value={{loggado, setLoggado}}>
-      <UserContext.Provider value={{user, setUser}}>
+      <UserProvider>
         <RouterProvider router={router} />
-      </UserContext.Provider>
+      </UserProvider>
     </LoggedInContext.Provider>
   );
+  // return (
+  //   <LoggedInContext.Provider value={{loggado, setLoggado}}>
+  //     <UserContext.Provider value={{user, setUser}}>
+  //       <RouterProvider router={router} />
+  //     </UserContext.Provider>
+  //   </LoggedInContext.Provider>
+  // );
 }
 
 export default App;
