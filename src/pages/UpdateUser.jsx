@@ -72,8 +72,8 @@ export default function UpdateUser () {
           <InputText tipo='text' nome='foto' rotulo='Link da Imagem' valorPadrao='Link da Imagem' referencia={fotoRef}/>
           </form>
 
-          <div className={`${styles.btn}`}><Button text={`Atualizar`} action={UpdateHandler} estilo={shared.btnLogin}>Atualizar</Button></div>
-          <Button fullWidth onClick={UpdateHandler} variant="contained" color="primary" className={`${styles.btn}`} disabled={loading}>{loading ? <CircularProgress size={24} /> : 'Cadastrar-se'}</Button>
+          {/* <div className={`${styles.btn}`}><Button text={`Atualizar`} action={UpdateHandler} estilo={shared.btnLogin}>Atualizar</Button></div> */}
+          <Button fullWidth onClick={UpdateHandler} variant="contained" color="primary" className={`${styles.btn}`} disabled={loading}>{loading ? <CircularProgress size={24} /> : 'Atualizar'}</Button>
         </div>
         </Card>
       </div>
